@@ -7,10 +7,10 @@ The project is a smart coffee machine based on the Raspberry PI 5 to recognize i
 
 ## Catalogue
 - [Introduction](#Introduction)
-- [Working Environment](#Working Environment)
+- [Working Environment](#Working_Environment)
 - [Usage](#Usage)
 - [Example](#Example)
-- [How to contribute](#How to contribute)
+- [How to contribute](#How_to_contribute)
 - [Lisence](#Lisence)
 - [Contacts](#Contacts)
 
@@ -21,17 +21,42 @@ The project is a smart coffee machine based on the Raspberry PI 5 to recognize i
 - 本项目旨在提供一个简单易用的工具，用于……
 - 项目的核心功能包括……
 
-## Working Environment
+## Working_Environment
 
 ## Usage 
 
 ## Example
 
-以下步骤将指导你如何安装和配置本项目。
 
-## How to contribute
+
+## How_to_contribute
 Code_Space:  It is utilized to place our code and some related documents. Every file and folder should be documented to clarify your structures. 
 Such as:
+├── Readme.md                   // Detailed introduction of whole project
+├── Testing                   	// Test script
+├── doc                         // Documents
+├── app                         // Application
+├── data						// Used for training or as essential data basis
+├── src                      // source codes
+│   ├── Image_Handle
+│   ├── Pluse_Handle            // 开发环境
+│	├──
+│   └── Readme.md               // 测试环境
+└── tools						//Some useful tool you can download as your nice assistance
+
+
+├── gulpfile.js
+├── locales
+├── logger-service.js           // 启动日志配置
+├── node_modules
+├── package.json
+├── app-service.js              // 启动应用配置
+├── static                      // web静态资源加载
+│   └── initjson
+│       └── config.js         // 提供给前端的配置
+├── test
+├── test-service.js
+
 	|QT code Space|
 		|UI|
 			MainWindows.ui
