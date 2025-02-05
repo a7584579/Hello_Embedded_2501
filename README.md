@@ -11,9 +11,9 @@ The project is a smart coffee machine based on the Raspberry PI 5 to recognize i
 - [Usage](#Usage)
 - [Example](#Example)
 - [How to contribute](#How_to_contribute)
+- [Repository_Structure](#Repository_Structure)
 - [Lisence](#Lisence)
 - [Contacts](#Contacts)
-- [Repository_Structure](#Repository_Structure)
 ## Introduction
 
 
