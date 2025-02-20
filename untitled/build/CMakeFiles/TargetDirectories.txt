@@ -1,0 +1,9 @@
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/untitled.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/edit_cache.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/rebuild_cache.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/list_install_components.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/install.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/install/local.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/install/strip.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/untitled_autogen_timestamp_deps.dir
+/home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/untitled_autogen.dir

@@ -1,0 +1,21 @@
+#ifndef QT_QTGRPC_MODULE_H
+#define QT_QTGRPC_MODULE_H
+#include <QtGrpc/QtGrpcDepends>
+#include "qtgrpcglobal.h"
+#include "qabstractgrpcchannel.h"
+#include "qabstractgrpcclient.h"
+#include "qabstractgrpccredentials.h"
+#include "qgrpccallreply.h"
+#include "qgrpcchannel.h"
+#include "qgrpccredentials.h"
+#include "qgrpchttp2channel.h"
+#include "qgrpcinsecurecredentials.h"
+#include "qgrpcoperation.h"
+#if QT_CONFIG(ssl)
+#include "qgrpcsslcredentials.h"
+#endif
+#include "qgrpcstatus.h"
+#include "qgrpcstream.h"
+#include "qgrpcuserpasswordcredentials.h"
+#include "qtgrpcversion.h"
+#endif

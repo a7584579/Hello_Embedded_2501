@@ -1,0 +1,5 @@
+#ifndef QT_QTQUICKSTUDIOAPPLICATION_MODULE_H
+#define QT_QTQUICKSTUDIOAPPLICATION_MODULE_H
+#include <QtQuickStudioApplication/QtQuickStudioApplicationDepends>
+#include "qtquickstudioapplicationversion.h"
+#endif

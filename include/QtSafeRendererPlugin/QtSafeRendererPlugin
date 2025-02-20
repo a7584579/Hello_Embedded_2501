@@ -1,0 +1,9 @@
+#ifndef QT_QTSAFERENDERERPLUGIN_MODULE_H
+#define QT_QTSAFERENDERERPLUGIN_MODULE_H
+#include <QtSafeRendererPlugin/QtSafeRendererPluginDepends>
+#include "qquicksafeimage.h"
+#include "qquicksafepicture.h"
+#include "qquicksafetext.h"
+#include "qsafemessagesender.h"
+#include "qtsaferendererpluginversion.h"
+#endif

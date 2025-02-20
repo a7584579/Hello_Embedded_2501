@@ -1,0 +1,7 @@
+#ifndef QT_QTINSIGHTTRACKER_MODULE_H
+#define QT_QTINSIGHTTRACKER_MODULE_H
+#include <QtInsightTracker/QtInsightTrackerDepends>
+#include "qinsightconfiguration.h"
+#include "qinsighttracker.h"
+#include "qtinsighttrackerversion.h"
+#endif
