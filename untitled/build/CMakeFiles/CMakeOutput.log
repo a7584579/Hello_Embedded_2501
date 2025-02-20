@@ -15,7 +15,7 @@ The CXX compiler identification is GNU, found in "/home/cx/Desktop/Qt_WorkSpace/
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_b4443 && [1/2] Building CXX object CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o
+Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_27c1a && [1/2] Building CXX object CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o
 Using built-in specs.
 COLLECT_GCC=/bin/g++
 OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -25,8 +25,8 @@ Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~2
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/'
- /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b4443.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccP8X4FZ.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/'
+ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_27c1a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cciqHoAM.s
 GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
 	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
 
@@ -37,8 +37,7 @@ ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
 ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include/
- .
+ /home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include
  /usr/include/c++/11
  /usr/include/x86_64-linux-gnu/c++/11
  /usr/include/c++/11/backward
@@ -52,13 +51,13 @@ GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/'
- as -v --64 -o CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccP8X4FZ.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/'
+ as -v --64 -o CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o /tmp/cciqHoAM.s
 GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.'
-[2/2] Linking CXX executable cmTC_b4443
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_27c1a
 Using built-in specs.
 COLLECT_GCC=/bin/g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -71,17 +70,16 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b4443' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b4443.'
- /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3lhSQk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b4443 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b4443' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b4443.'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_27c1a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_27c1a.'
+ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccV4AObS.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_27c1a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_27c1a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_27c1a.'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include/]
-    add: [.]
+    add: [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include]
     add: [/usr/include/c++/11]
     add: [/usr/include/x86_64-linux-gnu/c++/11]
     add: [/usr/include/c++/11/backward]
@@ -90,8 +88,7 @@ Parsed CXX implicit include dir info from above output: rv=done
     add: [/usr/include/x86_64-linux-gnu]
     add: [/usr/include]
   end of search list found
-  collapse include dir [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include/] ==> [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include]
-  skipping relative include dir [.]
+  collapse include dir [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include] ==> [/home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include]
   collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
   collapse include dir [/usr/include/x86_64-linux-gnu/c++/11] ==> [/usr/include/x86_64-linux-gnu/c++/11]
   collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
@@ -106,7 +103,7 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_b4443 && [1/2] Building CXX object CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_27c1a && [1/2] Building CXX object CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/bin/g++]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -116,8 +113,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b4443.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccP8X4FZ.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_27c1a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cciqHoAM.s]
   ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
   ignore line: []
@@ -128,8 +125,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include/]
-  ignore line: [ .]
+  ignore line: [ /home/cx/Qt/Tools/QtDesignStudio-4.1.1-lts/qt6_design_studio_reduced_version/include]
   ignore line: [ /usr/include/c++/11]
   ignore line: [ /usr/include/x86_64-linux-gnu/c++/11]
   ignore line: [ /usr/include/c++/11/backward]
@@ -143,13 +139,13 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccP8X4FZ.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o /tmp/cciqHoAM.s]
   ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [[2/2] Linking CXX executable cmTC_b4443]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_27c1a]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
@@ -162,13 +158,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b4443' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b4443.']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3lhSQk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b4443 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_27c1a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_27c1a.']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccV4AObS.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_27c1a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc3lhSQk.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccV4AObS.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -186,7 +182,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b4443] ==> ignore
+    arg [cmTC_27c1a] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
@@ -198,7 +194,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
-    arg [CMakeFiles/cmTC_b4443.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_27c1a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -228,16 +224,16 @@ Parsed CXX implicit link information from above output:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_74829 && [1/2] Building CXX object CMakeFiles/cmTC_74829.dir/CheckIncludeFile.cxx.o
-[2/2] Linking CXX executable cmTC_74829
+Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_75833 && [1/2] Building CXX object CMakeFiles/cmTC_75833.dir/CheckIncludeFile.cxx.o
+[2/2] Linking CXX executable cmTC_75833
 
 
 
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
 Change Dir: /home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_95f87 && [1/2] Building CXX object CMakeFiles/cmTC_95f87.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_95f87
+Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_58a32 && [1/2] Building CXX object CMakeFiles/cmTC_58a32.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_58a32
 
 
 Source file was:
@@ -264,8 +260,8 @@ int main(void)
 Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
 Change Dir: /home/cx/Desktop/Qt_WorkSpace/untitled/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_1425b && [1/2] Building CXX object CMakeFiles/cmTC_1425b.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_1425b
+Run Build Command(s):/home/cx/Qt/Tools/Ninja/ninja cmTC_20c00 && [1/2] Building CXX object CMakeFiles/cmTC_20c00.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_20c00
 
 
 Source file was:

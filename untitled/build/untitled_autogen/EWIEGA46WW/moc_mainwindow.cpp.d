@@ -1,5 +1,6 @@
 /home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/cx/Desktop/Qt_WorkSpace/untitled/mainwindow.h \
   /home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/moc_predefs.h \
+  /home/cx/Desktop/Qt_WorkSpace/untitled/header/QMainWindow \
   /home/cx/Desktop/Qt_WorkSpace/untitled/header/public_variable.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -368,7 +369,6 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 15.0.1, 2025-02-19T22:13:10. -->
+<!-- Written by QtCreator 15.0.1, 2025-02-20T00:28:18. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -103,15 +103,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
--DCMAKE_BUILD_TYPE:STRING=Debug
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
 -DCMAKE_PREFIX_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja</value>
+-DCMAKE_GENERATOR:STRING=Ninja
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_BUILD_TYPE:STRING=Debug</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/cx/Desktop/Qt_WorkSpace/untitled/build</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -160,15 +160,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
--DCMAKE_BUILD_TYPE:STRING=Release
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
 -DCMAKE_PREFIX_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja</value>
+-DCMAKE_GENERATOR:STRING=Ninja
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_BUILD_TYPE:STRING=Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/cx/Desktop/Qt_WorkSpace/250218/untitled/build/qmake6_gcc-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -215,15 +215,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
--DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
 -DCMAKE_PREFIX_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja</value>
+-DCMAKE_GENERATOR:STRING=Ninja
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/cx/Desktop/Qt_WorkSpace/250218/untitled/build/qmake6_gcc-RelWithDebInfo</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -270,15 +270,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
--DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
 -DCMAKE_PREFIX_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja</value>
+-DCMAKE_GENERATOR:STRING=Ninja
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo</value>
     <value type="int" key="EnableQmlDebugging">0</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/cx/Desktop/Qt_WorkSpace/250218/untitled/build/qmake6_gcc-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
@@ -326,15 +326,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
--DCMAKE_BUILD_TYPE:STRING=MinSizeRel
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
 -DCMAKE_PREFIX_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
 -DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja</value>
+-DCMAKE_GENERATOR:STRING=Ninja
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_BUILD_TYPE:STRING=MinSizeRel</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/cx/Desktop/Qt_WorkSpace/250218/untitled/build/qmake6_gcc-MinSizeRel</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">

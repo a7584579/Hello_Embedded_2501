@@ -1753,6 +1753,7 @@
  mmc:Q_OBJECT
  mdp:/home/cx/Desktop/Qt_WorkSpace/untitled/mainwindow.h
  mdp:/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/moc_predefs.h
+ mdp:/home/cx/Desktop/Qt_WorkSpace/untitled/header/QMainWindow
  mdp:/home/cx/Desktop/Qt_WorkSpace/untitled/header/public_variable.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
@@ -2121,7 +2122,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h
