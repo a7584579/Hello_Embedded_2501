@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/mocs_compilation.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/main.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/main.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/main.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/mainwindow.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/mainwindow.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/mainwindow.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/sensor_module.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/sensor_module.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/sensor_module.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/camera_module_handle.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/camera_module_handle.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/camera_module_handle.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/audio_module_handle.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/audio_module_handle.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/audio_module_handle.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/actuator_module_handle.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/actuator_module_handle.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/actuator_module_handle.cpp"
+},
+{
+  "directory": "/home/cx/Desktop/Qt_WorkSpace/untitled/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/cx/Desktop/Qt_WorkSpace/untitled/build/untitled_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/untitled.dir/src/core_module_handle.cpp.o -c /home/cx/Desktop/Qt_WorkSpace/untitled/src/core_module_handle.cpp",
+  "file": "/home/cx/Desktop/Qt_WorkSpace/untitled/src/core_module_handle.cpp"
+}
+]
