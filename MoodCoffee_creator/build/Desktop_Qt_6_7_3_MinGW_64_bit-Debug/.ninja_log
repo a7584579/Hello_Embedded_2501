@@ -1,0 +1,18 @@
+# ninja log v6
+738	3822	7622211594206255	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.obj	6b0f0a524554fc18
+34	277	7622240979223277	untitled_autogen/timestamp	da603ebfffea0203
+34	277	7622240979223277	untitled_autogen/mocs_compilation.cpp	da603ebfffea0203
+3394	3679	7622241012817347	untitled.exe	1d903a946a5d97bb
+34	277	7622240979223277	C:/Users/86186/Desktop/MOODCAFE_UI/MoodCoffee_creator/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/untitled_autogen/timestamp	da603ebfffea0203
+741	3895	7622211594235768	CMakeFiles/untitled.dir/main.cpp.obj	863f67445a5e7c53
+34	277	7622240979223277	C:/Users/86186/Desktop/MOODCAFE_UI/MoodCoffee_creator/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/untitled_autogen/mocs_compilation.cpp	da603ebfffea0203
+278	3394	7622240981661548	CMakeFiles/untitled.dir/mainwindow.cpp.obj	b977a2dba0249857
+45	280	7622249603203570	untitled_autogen/timestamp	da603ebfffea0203
+45	280	7622249603203570	untitled_autogen/mocs_compilation.cpp	da603ebfffea0203
+45	280	7622249603203570	C:/Users/86186/Desktop/MOODCAFE_UI/MoodCoffee_creator/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/untitled_autogen/timestamp	da603ebfffea0203
+45	280	7622249603203570	C:/Users/86186/Desktop/MOODCAFE_UI/MoodCoffee_creator/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/untitled_autogen/mocs_compilation.cpp	da603ebfffea0203
+282	423	7622249606819133	untitled_autogen/EWIEGA46WW/qrc_Resource.cpp	9034cf411e2278cd
+282	423	7622249606819133	C:/Users/86186/Desktop/MOODCAFE_UI/MoodCoffee_creator/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/untitled_autogen/EWIEGA46WW/qrc_Resource.cpp	9034cf411e2278cd
+426	3019	7622249607008635	CMakeFiles/untitled.dir/untitled_autogen/EWIEGA46WW/qrc_Resource.cpp.obj	351a22d6557ba537
+423	3684	7622249606978711	CMakeFiles/untitled.dir/mainwindow.cpp.obj	b977a2dba0249857
+3684	4101	7622249639586970	untitled.exe	a4bf81951c7dee6d
