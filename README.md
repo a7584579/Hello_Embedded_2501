@@ -18,7 +18,7 @@ The project is a smart coffee machine based on the Raspberry PI 5 to recognize i
 
 
 ## Working_Environment
-Ubuntu 22.04.5 on Raspberry5 for now.
+Debian 12 on Raspberry5 for now.
 Expected to be deployed on different platform. 
 ## Usage 
 
