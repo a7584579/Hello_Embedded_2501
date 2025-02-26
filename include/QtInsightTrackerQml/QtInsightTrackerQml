@@ -1,5 +1,0 @@
-#ifndef QT_QTINSIGHTTRACKERQML_MODULE_H
-#define QT_QTINSIGHTTRACKERQML_MODULE_H
-#include <QtInsightTrackerQml/QtInsightTrackerQmlDepends>
-#include "qtinsighttrackerqmlversion.h"
-#endif

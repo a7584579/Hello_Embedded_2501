@@ -1,5 +1,0 @@
-#ifndef QT_QTWAYLANDGLOBAL_MODULE_H
-#define QT_QTWAYLANDGLOBAL_MODULE_H
-#include <QtWaylandGlobal/QtWaylandGlobalDepends>
-#include "qtwaylandglobalversion.h"
-#endif
