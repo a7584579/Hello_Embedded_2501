@@ -13,6 +13,11 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 
+#qt_standard_project_setup()
+
+include_directories(./header)
+#add_subdirectory(src/app)
+
 
 set(PROJECT_SOURCES
         main.cpp
@@ -25,12 +30,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(untitled
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        sensor_module.h sensor_module.cpp
-        camera_module_handle.h camera_module_handle.cpp
-        audio_module_handle.h audio_module_handle.cpp
-        actuator_module_handle.h actuator_module_handle.cpp
-        core_module_handle.h core_module_handle.cpp
-        public_variable.h
+        ./header/sensor_module.h ./src/sensor_module.cpp
+        ./header/camera_module_handle.h ./src/camera_module_handle.cpp
+        ./header/audio_module_handle.h ./src/audio_module_handle.cpp
+        ./header/actuator_module_handle.h ./src/actuator_module_handle.cpp
+        ./header/core_module_handle.h ./src/core_module_handle.cpp
+        ./header/public_variable.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET untitled APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

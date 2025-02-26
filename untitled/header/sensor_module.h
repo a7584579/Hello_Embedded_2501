@@ -5,9 +5,6 @@
 #include <QThread>
 #include <QDebug>
 
-
-
-
 class Sensor_Module : public QObject
 {
     Q_OBJECT
