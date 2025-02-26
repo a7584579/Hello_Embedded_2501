@@ -2,6 +2,21 @@
 #include <algorithm>
 #include <QDebug>
 
+/*
+ * lastHeartRate 数据范围判定
+ *
+*   QMutexLocker locker(&dataMutex);确认锁的使用条件
+    lastHeartRate = heartRate;
+ *
+ * updateSensorData功能拆分
+ *
+ * 信号与槽循环调用
+ *
+ *
+ * SelfCheckHandle：不用主动发送信号，自检完成后等待主函数查询，Needs文档要求
+ */
+
+
 const std::array<uint16_t, Sensor_Module::HAMMING_SIZE> Sensor_Module::auw_hamm = {41, 276, 512, 276, 41};
 Sensor_Module::Sensor_Module(QObject *parent)
 
@@ -14,6 +29,7 @@ Sensor_Module::Sensor_Module(QObject *parent)
     lastHeartRate = 0;
     lastSpo2 = 0;
 
+
 	int result = sensor.begin();
     if (result < 0) {
         qWarning() << "Sensor initialization failed! Error: " << result;
@@ -21,11 +37,15 @@ Sensor_Module::Sensor_Module(QObject *parent)
         qDebug() << "Sensor initialized successfully. Revision ID: " << result;
         sensor.setup();
     }
-
     connect(&sensorTimer, &QTimer::timeout, this, &Sensor_Module::updateSensorData);
-    sensorTimer.start(10);
+    sensorTimer.start(10);//10ms cycle，
+    //待修改，定时器start属性配置
+    //sensorTimer.singleShot()改成单次触发，不做循环触发
 }
 
+/*Periodically executing function
+    drive by sensorTimer::timeout
+*/
 void Sensor_Module::updateSensorData() 
 {
     uint32_t red = sensor.getRed();
@@ -130,7 +150,7 @@ uint8_t Sensor_Module::SPO2_ValueHandle()
 uint8_t Sensor_Module::SelfCheckHandle()
 {
 	int check_result = sensor.begin();
-    bool success = (result >= 0);
+    bool success = (check_result >= 0);
     emit selfCheckResult(success);
     return success ? 0x00 : 0xFF;
 }

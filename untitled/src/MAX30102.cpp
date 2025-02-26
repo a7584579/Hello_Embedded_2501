@@ -459,7 +459,14 @@ uint8_t MAX30102::getRevisionID() {
 }
 
 
-// Setup the Sensor
+/* Setup the Sensor
+powerLevel:,default:0x1F
+sampleAverage：,default:4
+ledMode:,default:2
+sampleRate:，default:100
+pulseWidth:，default:411
+adcRange:,default:4096
+*/
 void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode, int sampleRate, int pulseWidth, int adcRange) {
 	// Reset all configuration, threshold, and data registers to POR values
 	softReset();

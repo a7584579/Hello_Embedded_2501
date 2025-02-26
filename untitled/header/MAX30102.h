@@ -3,7 +3,7 @@
 
 #define MAX30102_ADDRESS	0x57
 
-#define I2C_SPEED_STANDARD	100000
+#define I2C_SPEED_STANDARD	100000//100KHz
 #define I2C_SPEED_FAST		400000
 
 #define I2C_BUFFER_LENGTH	32
@@ -11,9 +11,10 @@
 class MAX30102 {
 	public:
 		MAX30102(void);
-		int begin(uint32_t i2cSpeed = I2C_SPEED_STANDARD, uint8_t i2cAddr = MAX30102_ADDRESS);
+        //result is the revision number of sensor
+		int begin(uint32_t i2cSpeed = I2C_SPEED_STANDARD, uint8_t i2cAddr = MAX30102_ADDRESS);  
 
-		uint32_t getRed(void); // Returns immediate red value
+        uint32_t getRed(void);
 		uint32_t getIR(void); // Returns immediate IR value
 		bool safeCheck(uint8_t maxTimeToCheck); // Given a max amount of time, checks for new data.
 		
