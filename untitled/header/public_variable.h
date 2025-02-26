@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <QThread>
+#include "Sensor_Module.h"
 
 enum CoffeeMachine_State
 {
@@ -52,24 +53,46 @@ private:
 
 };
 
-class Sensor_Thread_Class: public QThread
+class Sensor_Thread_Class : public QThread
 {
 public:
-    Sensor_Thread_Class()
+    Sensor_Thread_Class(QObject* parent = nullptr)
+        : QThread(parent), sensorModule(new Sensor_Module())
     {
-        ;
+        sensorModule->moveToThread(this);
     }
 
     ~Sensor_Thread_Class()
     {
-        ;
+        quit();
+        wait();
+        delete sensorModule;
     }
 
-    void Sensor_Thread_Run();
+    uint8_t HeartbeatValueHandle()
+    {
+        return sensorModule->HeartbeatValueHandle();
+    }
+
+    uint8_t SPO2_ValueHandle()
+    {
+        return sensorModule->SPO2_ValueHandle();
+    }
+	uint8_t SelfCheckHandle()
+    {
+        return sensorModule->SelfCheckHandle();
+    }
+
+protected:
+    void run() override
+    {
+        exec();
+    }
 
 private:
-
+    Sensor_Module* sensorModule;
 };
+
 
 class Camera_Thread_Class: public QThread
 {
