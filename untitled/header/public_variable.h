@@ -53,18 +53,13 @@ private:
 
 };
 
-// 1
 class Sensor_Thread_Class : public QThread
 {
-    Q_OBJECT
 public:
     Sensor_Thread_Class(QObject* parent = nullptr)
         : QThread(parent), sensorModule(new Sensor_Module())
     {
         sensorModule->moveToThread(this);
-        connect(sensorModule, &Sensor_Module::heartRateUpdated, this, &Sensor_Thread_Class::onHeartRateUpdated);
-        connect(sensorModule, &Sensor_Module::spo2Updated, this, &Sensor_Thread_Class::onSpo2Updated);
-        connect(sensorModule, &Sensor_Module::selfCheckResult, this, &Sensor_Thread_Class::onSelfCheckResult);
     }
 
     ~Sensor_Thread_Class()
@@ -83,33 +78,16 @@ public:
     {
         return sensorModule->SPO2_ValueHandle();
     }
+	uint8_t SelfCheckHandle()
+    {
+        return sensorModule->SelfCheckHandle();
+    }
 
 protected:
     void run() override
     {
         exec();
     }
-
-private slots:
-    void onHeartRateUpdated(int heartRate)
-    {
-        emit heartRateUpdated(heartRate);
-    }
-
-    void onSpo2Updated(int spo2)
-    {
-        emit spo2Updated(spo2);
-    }
-
-    void onSelfCheckResult(bool success)
-    {
-        emit selfCheckResult(success);
-    }
-
-signals:
-    void heartRateUpdated(int heartRate);
-    void spo2Updated(int spo2);
-    void selfCheckResult(bool success);
 
 private:
     Sensor_Module* sensorModule;

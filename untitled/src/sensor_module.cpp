@@ -2,28 +2,12 @@
 #include <algorithm>
 #include <QDebug>
 
-/*
- * lastHeartRate 数据范围判定
- *
-*   QMutexLocker locker(&dataMutex);确认锁的使用条件
-    lastHeartRate = heartRate;
- *
- * updateSensorData功能拆分
- *
- * 信号与槽循环调用
- *
- *
- * SelfCheckHandle：不用主动发送信号，自检完成后等待主函数查询，Needs文档要求
- */
-
-
 const std::array<uint16_t, Sensor_Module::HAMMING_SIZE> Sensor_Module::auw_hamm = {41, 276, 512, 276, 41};
 Sensor_Module::Sensor_Module(QObject *parent)
 
     : QObject(parent),
       sensor(),
       sensorTimer(this),
-      dataMutex()
 {
     bufferIndex = 0;
     lastHeartRate = 0;
@@ -56,102 +40,98 @@ void Sensor_Module::updateSensorData()
     redBuffer[bufferIndex] = red;
     irBuffer[bufferIndex] = ir;
     bufferIndex = (bufferIndex + 1) % BUFFER_SIZE;
+	
+	if (bufferIndex == 0) {
+        int heartRate, spo2;
+        processSensorData(redBuffer, irBuffer, &heartRate, &spo2);
+		qDebug() << "heartRate:" << heartRate << "spo2:" << spo2;
+		lastHeartRate = heartRate;
+        lastSpo2 = spo2;
+	}
+}
 
-    if (bufferIndex == 0) {
-        uint32_t un_red_mean = 0;
-        for (int k = 0; k < BUFFER_SIZE; k++) un_red_mean += redBuffer[k];
-        un_red_mean /= BUFFER_SIZE;
-        for (int k = 0; k < BUFFER_SIZE; k++) an_x[k] = redBuffer[k] - un_red_mean;
-        for (int k = 0; k < BUFFER_SIZE - MA4_SIZE; k++) {
-            an_x[k] = (an_x[k] + an_x[k + 1] + an_x[k + 2] + an_x[k + 3]) / 4;
-        }
+void Sensor_Module::processSensorData(std::array<uint32_t, BUFFER_SIZE>& redBuffer, std::array<uint32_t, BUFFER_SIZE>& irBuffer, int* heartRate, int* spo2)
+{
+	uint32_t un_red_mean = 0;
+	for (int k = 0; k < BUFFER_SIZE; k++) un_red_mean += redBuffer[k];
+	un_red_mean /= BUFFER_SIZE;
+	for (int k = 0; k < BUFFER_SIZE; k++) an_x[k] = redBuffer[k] - un_red_mean;
+	for (int k = 0; k < BUFFER_SIZE - MA4_SIZE; k++) {
+		an_x[k] = (an_x[k] + an_x[k + 1] + an_x[k + 2] + an_x[k + 3]) / 4;
+	}
 
-        for (int k = 0; k < BUFFER_SIZE - MA4_SIZE - 1; k++) {
-            an_dx[k] = an_x[k + 1] - an_x[k];
-        }
-		
-        for (int k = 0; k < BUFFER_SIZE - MA4_SIZE - 2; k++) {
-            an_dx[k] = (an_dx[k] + an_dx[k + 1]) / 2;
-        }
+	for (int k = 0; k < BUFFER_SIZE - MA4_SIZE - 1; k++) {
+		an_dx[k] = an_x[k + 1] - an_x[k];
+	}
+	
+	for (int k = 0; k < BUFFER_SIZE - MA4_SIZE - 2; k++) {
+		an_dx[k] = (an_dx[k] + an_dx[k + 1]) / 2;
+	}
 
-        for (int i = 0; i < BUFFER_SIZE - HAMMING_SIZE - MA4_SIZE - 2; i++) {
-            int32_t s = 0;
-            for (int k = i; k < i + HAMMING_SIZE; k++) {
-                s -= an_dx[k] * auw_hamm[k - i];
-            }
-            an_dx[i] = s / 1146;
-        }
+	for (int i = 0; i < BUFFER_SIZE - HAMMING_SIZE - MA4_SIZE - 2; i++) {
+		int32_t s = 0;
+		for (int k = i; k < i + HAMMING_SIZE; k++) {
+			s -= an_dx[k] * auw_hamm[k - i];
+		}
+		an_dx[i] = s / 1146;
+	}
 
-        int32_t n_th1 = 0;
-        for (int k = 0; k < BUFFER_SIZE - HAMMING_SIZE; k++) {
-            n_th1 += (an_dx[k] > 0 ? an_dx[k] : -an_dx[k]);
-        }
-        n_th1 /= (BUFFER_SIZE - HAMMING_SIZE);
+	int32_t n_th1 = 0;
+	for (int k = 0; k < BUFFER_SIZE - HAMMING_SIZE; k++) {
+		n_th1 += (an_dx[k] > 0 ? an_dx[k] : -an_dx[k]);
+	}
+	n_th1 /= (BUFFER_SIZE - HAMMING_SIZE);
 
-        int32_t an_dx_peak_locs[15];
-        int32_t n_npks = 0;
-        maxim_find_peaks(an_dx_peak_locs, &n_npks, an_dx.data(), BUFFER_SIZE - HAMMING_SIZE, n_th1, 8, 5);
-     
-		int heartRate;
-        if (n_npks >= 2) {
-            int32_t n_peak_interval_sum = 0;
-            for (int k = 1; k < n_npks; k++) {
-                n_peak_interval_sum += (an_dx_peak_locs[k] - an_dx_peak_locs[k - 1]);
-            }
-            n_peak_interval_sum /= (n_npks - 1);
-            heartRate = 6000 / n_peak_interval_sum;
-        } else {
-            heartRate = 255;
-        }
+	int32_t an_dx_peak_locs[15];
+	int32_t n_npks = 0;
+	maxim_find_peaks(an_dx_peak_locs, &n_npks, an_dx.data(), BUFFER_SIZE - HAMMING_SIZE, n_th1, 8, 5);
 
-        uint32_t redMax = *std::max_element(redBuffer.begin(), redBuffer.end());
-        uint32_t redMin = *std::min_element(redBuffer.begin(), redBuffer.end());
-        uint32_t irMax = *std::max_element(irBuffer.begin(), irBuffer.end());
-        uint32_t irMin = *std::min_element(irBuffer.begin(), irBuffer.end());
+	if (n_npks >= 2) {
+		int32_t n_peak_interval_sum = 0;
+		for (int k = 1; k < n_npks; k++) {
+			n_peak_interval_sum += (an_dx_peak_locs[k] - an_dx_peak_locs[k - 1]);
+		}
+		n_peak_interval_sum /= (n_npks - 1);
+		*heartRate = 6000 / n_peak_interval_sum;
+	} else {
+		*heartRate = 255; // The heart value is invalid.
+	}
 
-        uint32_t ACred = redMax - redMin;
-        uint32_t DCred = (redMax + redMin) / 2;
-        uint32_t ACired = irMax - irMin;
-        uint32_t DCired = (irMax + irMin) / 2;
+	uint32_t redMax = *std::max_element(redBuffer.begin(), redBuffer.end());
+	uint32_t redMin = *std::min_element(redBuffer.begin(), redBuffer.end());
+	uint32_t irMax = *std::max_element(irBuffer.begin(), irBuffer.end());
+	uint32_t irMin = *std::min_element(irBuffer.begin(), irBuffer.end());
 
-        double R = ((double)(ACred * DCired)) / (DCred * ACired);
-        int spo2 = -45.060 * R * R + 30.354 * R + 94.845;
+	uint32_t ACred = redMax - redMin;
+	uint32_t DCred = (redMax + redMin) / 2;
+	uint32_t ACired = irMax - irMin;
+	uint32_t DCired = (irMax + irMin) / 2;
 
-        if (heartRate > 200 || spo2 < 80 || spo2 > 100) {
-            heartRate = 255;
-            spo2 = 255;
-        }
+	double R = ((double)(ACred * DCired)) / (DCred * ACired);
+	*spo2 = -45.060 * R * R + 30.354 * R + 94.845;
 
-        {
-            QMutexLocker locker(&dataMutex);
-            lastHeartRate = heartRate;
-            lastSpo2 = spo2;
-        }
-
-        emit heartRateUpdated(heartRate); 
-        emit spo2Updated(spo2);
-
-        qDebug() << "heartRate:" << heartRate << "spo2:" << spo2;
+	if (*heartRate > 200) {
+        *heartRate = 255;
+    }
+    if (*spo2 < 80 || *spo2 > 100) {
+        *spo2 = 255;
     }
 }
 
 uint8_t Sensor_Module::HeartbeatValueHandle()
 {
-    QMutexLocker locker(&dataMutex);
-    return (lastHeartRate > 255) ? 255 : static_cast<uint8_t>(lastHeartRate);
+    return static_cast<uint8_t>(lastHeartRate);
 }
 
 uint8_t Sensor_Module::SPO2_ValueHandle()
 {
-    QMutexLocker locker(&dataMutex);
-    return (lastSpo2 > 255) ? 255 : static_cast<uint8_t>(lastSpo2);
+    return static_cast<uint8_t>(lastSpo2);
 }
 
 uint8_t Sensor_Module::SelfCheckHandle()
 {
 	int check_result = sensor.begin();
     bool success = (check_result >= 0);
-    emit selfCheckResult(success);
     return success ? 0x00 : 0xFF;
 }
 
