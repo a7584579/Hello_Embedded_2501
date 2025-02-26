@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <QThread>
+#include "Sensor_Module.h"
 
 enum CoffeeMachine_State
 {
@@ -52,24 +53,68 @@ private:
 
 };
 
-class Sensor_Thread_Class: public QThread
+// 1
+class Sensor_Thread_Class : public QThread
 {
+    Q_OBJECT
 public:
-    Sensor_Thread_Class()
+    Sensor_Thread_Class(QObject* parent = nullptr)
+        : QThread(parent), sensorModule(new Sensor_Module())
     {
-        ;
+        sensorModule->moveToThread(this);
+        connect(sensorModule, &Sensor_Module::heartRateUpdated, this, &Sensor_Thread_Class::onHeartRateUpdated);
+        connect(sensorModule, &Sensor_Module::spo2Updated, this, &Sensor_Thread_Class::onSpo2Updated);
+        connect(sensorModule, &Sensor_Module::selfCheckResult, this, &Sensor_Thread_Class::onSelfCheckResult);
     }
 
     ~Sensor_Thread_Class()
     {
-        ;
+        quit();
+        wait();
+        delete sensorModule;
     }
 
-    void Sensor_Thread_Run();
+    uint8_t HeartbeatValueHandle()
+    {
+        return sensorModule->HeartbeatValueHandle();
+    }
+
+    uint8_t SPO2_ValueHandle()
+    {
+        return sensorModule->SPO2_ValueHandle();
+    }
+
+protected:
+    void run() override
+    {
+        exec();
+    }
+
+private slots:
+    void onHeartRateUpdated(int heartRate)
+    {
+        emit heartRateUpdated(heartRate);
+    }
+
+    void onSpo2Updated(int spo2)
+    {
+        emit spo2Updated(spo2);
+    }
+
+    void onSelfCheckResult(bool success)
+    {
+        emit selfCheckResult(success);
+    }
+
+signals:
+    void heartRateUpdated(int heartRate);
+    void spo2Updated(int spo2);
+    void selfCheckResult(bool success);
 
 private:
-
+    Sensor_Module* sensorModule;
 };
+
 
 class Camera_Thread_Class: public QThread
 {

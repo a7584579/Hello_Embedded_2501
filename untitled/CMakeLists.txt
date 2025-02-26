@@ -36,6 +36,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ./header/actuator_module_handle.h ./src/actuator_module_handle.cpp
         ./header/core_module_handle.h ./src/core_module_handle.cpp
         ./header/public_variable.h
+        header/MAX30102.h
+        src/MAX30102.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET untitled APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
