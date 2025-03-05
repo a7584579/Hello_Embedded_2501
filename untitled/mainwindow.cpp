@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked_1()));
+    MainWindowButton_init();
 }
 
 MainWindow::~MainWindow()
@@ -15,7 +15,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked_1()
+void MainWindow::MainWindowButton_init()
+{
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(PushButton_Clicked_Slot()));
+}
+
+
+
+
+void MainWindow::PushButton_Clicked_Slot()
 {
     ui->tabWidget->setCurrentIndex(1);
 }
