@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QThread>
 
-
+//
 
 
 
