@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include <QThread>
-#include "Sensor_Module.h"
+#include "sensor_module.h"
 
 enum CoffeeMachine_State
 {
@@ -56,15 +56,47 @@ private:
 class Sensor_Thread_Class : public QThread
 {
 public:
-    Sensor_Thread_Class(QObject* parent = nullptr)
-        : QThread(parent), sensorModule(new Sensor_Module())
+    Sensor_Thread_Class(QObject* parent = nullptr): QThread(parent), sensorModule(new Sensor_Module())
     {
+        //review comment
+        //added by cx250305
+        /*
+         * To coder
+         * added by cx250305
+         *
+         * QThread:no need for initialise QThread
+         *
+         * why choose to inherit Sensor_Module and use point
+         *
+         * */
+
         sensorModule->moveToThread(this);
+        //To tester and codeviewer need to confirm Sensor_Thread_Class->start() works normally
+        //added by cx250305
+        /*
+         * added by cx250305
+         * Warning: This function is not thread-safe;
+         * the current thread must be same as the current thread affinity.
+         * In other words, this function can only "push" an object from the current thread to another thread,
+         * it cannot "pull" an object from any arbitrary thread to the current thread.
+         * There is one exception to this rule however:
+         * objects with no thread affinity can be "pulled" to the current thread
+         * */
     }
 
     ~Sensor_Thread_Class()
     {
         quit();
+        /*
+         *added by cx250305
+         *Tells the thread's event loop to exit with return code 0 (success).
+         *Equivalent to calling QThread::exit(0).This function does nothing if the thread
+         *does not have an event loop
+         *
+         *
+         *
+         */
+
         wait();
         delete sensorModule;
     }
@@ -85,8 +117,17 @@ public:
 
 protected:
     void run() override
+    //
     {
         exec();
+        /*
+         * exec()
+         *
+         * This function is meant to be called from within run().
+         * It is necessary to call this function to start event handling.
+         *
+         * Note: This can only be called within the thread itself, i.e. when it is the current thread.
+         */
     }
 
 private:
