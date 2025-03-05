@@ -1,8 +1,12 @@
-//该文件为测试文件
+/*
+该文件为测试文件
 #include <QCoreApplication>
 #include "actuator_module_handle.h"
 
 int main(int argc, char *argv[]) {
+
+    
+    
     // 初始化 Qt 核心应用，使用 QCoreApplication
     QCoreApplication app(argc, argv);
 
@@ -26,5 +30,17 @@ int main(int argc, char *argv[]) {
 
     // 所有线程完成后退出
     return 0;
+}*/
+
+#include "mainwindow.h"
+
+#include <QApplication>
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
 
