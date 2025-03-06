@@ -2,9 +2,9 @@
 Thank you for your interest in contributing to MOOD Coffee! We welcome all contributions, whether it's fixing bugs, improving documentation, or adding new features. Please follow these guidelines to ensure a smooth collaboration.
 
 ## How to Contribute
-1. Fork the repository.
+1. Fork the repository.  
 Click the "Fork" button at the top right of the repository to create your own copy.
-2. Clone Your Fork.
+2. Clone Your Fork.  
 git clone <your-forked-repository-url>
 3. Create a feature branch
 git checkout -b feature-xyz
