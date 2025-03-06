@@ -25,7 +25,8 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    void MainWindowButton_init();
+    void MainWindowButton_Init();
+    void CoffeeMaker_Module_Init();
 
 
 private slots:
@@ -35,7 +36,7 @@ private slots:
     void PushButton3_Clicked_Slot();
     void PushButton4_Clicked_Slot();
     void PushButton5_Clicked_Slot();
-
+    void PushButton6_Clicked_Slot();
 
     //For variable or widgt control
     void FaceReg_Image_Display_Tab2_Slot();

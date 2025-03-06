@@ -90,25 +90,6 @@ private:
 
 };
 
-class Core_Thread_Class: public QThread
-{
-public:
-    Core_Thread_Class()
-    {
-        ;
-    }
-
-    ~Core_Thread_Class()
-    {
-        ;
-    }
-
-    void Core_Thread_Run();
-
-private:
-
-};
-
 class Public_Varaible
 {
 
