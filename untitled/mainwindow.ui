@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
+    <width>800</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,518 +14,49 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1024</width>
-      <height>600</height>
+      <x>420</x>
+      <y>220</y>
+      <width>89</width>
+      <height>25</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
+    <property name="text">
+     <string>PushButton</string>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
-    </property>
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>-50</y>
-       <width>1024</width>
-       <height>660</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="tab1wake">
-      <property name="styleSheet">
-       <string notr="true">background-color: #4A3C3B;
-</string>
-      </property>
-      <attribute name="title">
-       <string>Tab 1</string>
-      </attribute>
-      <widget class="QFrame" name="frame_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1024</width>
-         <height>660</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>-10</x>
-          <y>140</y>
-          <width>1031</width>
-          <height>441</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>24</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    background-color: #E5D4C2; 
-    color: #4A3C3B;
-    border-radius: 5px;                
-}
-
-QPushButton:pressed {
-    background-color: #C56C34;
-}
-</string>
-        </property>
-        <property name="text">
-         <string>Wake</string>
-        </property>
-        <property name="autoDefault">
-         <bool>false</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>111</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;</string>
-        </property>
-        <property name="text">
-         <string>Mood Coffee</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>60</y>
-          <width>371</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Power on - Self Check</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab2face">
-      <property name="styleSheet">
-       <string notr="true">background-color: #4A3C3B;
-</string>
-      </property>
-      <attribute name="title">
-       <string>Tab 2</string>
-      </attribute>
-      <widget class="QFrame" name="frame_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1024</width>
-         <height>660</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;ui version=&quot;4.0&quot;&gt;
- &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
-  &lt;widget class=&quot;QFrame&quot; name=&quot;frame_3&quot;&gt;
-   &lt;property name=&quot;geometry&quot;&gt;
-    &lt;rect&gt;
-     &lt;x&gt;0&lt;/x&gt;
-     &lt;y&gt;0&lt;/y&gt;
-     &lt;width&gt;1024&lt;/width&gt;
-     &lt;height&gt;660&lt;/height&gt;
-    &lt;/rect&gt;
-   &lt;/property&gt;
-   &lt;property name=&quot;frameShape&quot;&gt;
-    &lt;enum&gt;QFrame::Shape::StyledPanel&lt;/enum&gt;
-   &lt;/property&gt;
-   &lt;property name=&quot;frameShadow&quot;&gt;
-    &lt;enum&gt;QFrame::Shadow::Raised&lt;/enum&gt;
-   &lt;/property&gt;
-  &lt;/widget&gt;
- &lt;/widget&gt;
- &lt;resources/&gt;
-&lt;/ui&gt;
-</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>800</x>
-          <y>300</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>NEXT</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>800</x>
-          <y>400</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>BACK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>210</y>
-          <width>321</width>
-          <height>331</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="Resource.qrc">:/new/prefix1/images/1.jpg</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>111</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;</string>
-        </property>
-        <property name="text">
-         <string>Mood Coffee</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>60</y>
-          <width>371</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Mood Recognition</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_13">
-        <property name="geometry">
-         <rect>
-          <x>710</x>
-          <y>170</y>
-          <width>54</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>DHIFHSIHFDSK</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab3">
-      <attribute name="title">
-       <string>页</string>
-      </attribute>
-      <widget class="QFrame" name="frame_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1024</width>
-         <height>660</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: #E5D4C2;
-</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>800</x>
-          <y>300</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>NEXT</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="geometry">
-         <rect>
-          <x>800</x>
-          <y>400</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>BACK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>111</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #4A3C3B;</string>
-        </property>
-        <property name="text">
-         <string>Mood Coffee</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_10">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>60</y>
-          <width>371</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #4A3C3B;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Physical Signs</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>250</y>
-          <width>359</width>
-          <height>81</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #4A3C3B;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Heart Rate:  78 BPM  </string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>360</y>
-          <width>359</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #4A3C3B;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>SpO2 Level:  98% </string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab4">
-      <attribute name="title">
-       <string>页</string>
-      </attribute>
-      <widget class="QFrame" name="frame_6">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1024</width>
-         <height>660</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: #C56C34;
-</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="geometry">
-         <rect>
-          <x>800</x>
-          <y>400</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>BACK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>111</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;</string>
-        </property>
-        <property name="text">
-         <string>Mood Coffee</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_11">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>230</y>
-          <width>231</width>
-          <height>271</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="Resource.qrc">:/new/prefix1/images/2.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_12">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>60</y>
-          <width>371</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #E5D4C2;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Coffer Maker</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-    </widget>
    </widget>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="Resource.qrc"/>
- </resources>
- <connections/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>564</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
