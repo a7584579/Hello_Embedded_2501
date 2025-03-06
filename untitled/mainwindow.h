@@ -24,5 +24,23 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    void MainWindowButton_init();
+
+
+private slots:
+    //For Pushbutton slots
+    void PushButton_Clicked_Slot();
+    void PushButton2_Clicked_Slot();
+    void PushButton3_Clicked_Slot();
+    void PushButton4_Clicked_Slot();
+    void PushButton5_Clicked_Slot();
+
+
+    //For variable or widgt control
+    void FaceReg_Image_Display_Tab2_Slot();
+    void Heartrate_Image_Display_Tab3_Slot();
+
+
 };
 #endif // MAINWINDOW_H
