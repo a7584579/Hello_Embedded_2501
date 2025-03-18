@@ -29,6 +29,15 @@ private:
     void CoffeeMaker_Module_Init();
 
 
+
+
+    //For test
+    int last_Page=-1;
+
+
+
+
+
 private slots:
     //For Pushbutton slots
     void PushButton_Clicked_Slot();
@@ -37,6 +46,11 @@ private slots:
     void PushButton4_Clicked_Slot();
     void PushButton5_Clicked_Slot();
     void PushButton6_Clicked_Slot();
+
+    void PushButton8_Clicked_Slot();
+
+    void Enter_Test_Page();
+    void Quit_Test_Page();
 
     //For variable or widgt control
     void FaceReg_Image_Display_Tab2_Slot();

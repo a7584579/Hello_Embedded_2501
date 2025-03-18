@@ -4,6 +4,15 @@
 #include <stdlib.h>
 #include <QThread>
 
+
+//Macro defination
+#define INDEX_OF_READYPAGE                      0
+#define INDEX_OF_PROCESSINGPAGE1_EMOTION        1
+#define INDEX_OF_PROCESSINGPAGE2_PHYSICS        2
+#define INDEX_OF_PROCESSINGPAGE3_FORMULA        3
+#define INDEX_OF_PROCESSINGPAGE4_MAKING         4
+#define INDEX_OF_MAINTAINPAGE                   5
+
 enum CoffeeMachine_State
 {
     coffeeMachine_State_Startup,
