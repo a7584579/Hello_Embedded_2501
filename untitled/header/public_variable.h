@@ -3,6 +3,20 @@
 
 #include <stdlib.h>
 #include <QThread>
+#include "camera_module_handle.h"
+#include "actuator_module_handle.h"
+#include "audio_module_handle.h"
+
+//Macro defination
+#define INDEX_OF_READYPAGE                      0
+#define INDEX_OF_PROCESSINGPAGE1_EMOTION        1
+#define INDEX_OF_PROCESSINGPAGE2_PHYSICS        2
+#define INDEX_OF_PROCESSINGPAGE3_FORMULA        3
+#define INDEX_OF_PROCESSINGPAGE4_MAKING         4
+#define INDEX_OF_MAINTAINPAGE                   5
+
+#define INDEX_OF_INITPAGE                       6
+#define INDEX_OF_ERRORINFOPAGE                  7
 
 enum CoffeeMachine_State
 {
@@ -14,105 +28,18 @@ enum CoffeeMachine_State
     coffeeMachine_State_making,
 };
 
-class Audio_Thread_Class: public QThread
-{
-public:
-    Audio_Thread_Class()
-    {
-        ;
-    }
-
-    ~Audio_Thread_Class()
-    {
-        ;
-    }
-
-    void Audio_Thread_Run();
-
-private:
-
-};
-
-class Actuator_Thread_Class: public QThread
-{
-public:
-    Actuator_Thread_Class()
-    {
-        ;
-    }
-
-    ~Actuator_Thread_Class()
-    {
-        ;
-    }
-
-    void Actuator_Thread_Run();
-
-private:
-
-};
-
-class Sensor_Thread_Class: public QThread
-{
-public:
-    Sensor_Thread_Class()
-    {
-        ;
-    }
-
-    ~Sensor_Thread_Class()
-    {
-        ;
-    }
-
-    void Sensor_Thread_Run();
-
-private:
-
-};
-
-class Camera_Thread_Class: public QThread
-{
-public:
-    Camera_Thread_Class()
-    {
-        ;
-    }
-
-    ~Camera_Thread_Class()
-    {
-        ;
-    }
-
-    void Camera_Thread_Run();
-
-private:
-
-};
-
-class Core_Thread_Class: public QThread
-{
-public:
-    Core_Thread_Class()
-    {
-        ;
-    }
-
-    ~Core_Thread_Class()
-    {
-        ;
-    }
-
-    void Core_Thread_Run();
-
-private:
-
-};
 
 class Public_Varaible
 {
 
 public:
+
+    QThread Actuator_Module_Thread;
+    QThread Camera_Module_Thread;
+    Camera_Module_Handle* Camera_Module_Instant=nullptr;
+    Actuator_Module_Handle* Actuator_Module_Instant=nullptr;
+    Audio_Module_Handle* Audio_Module_Instant=nullptr;
+
 
     Public_Varaible()
     {
@@ -123,6 +50,7 @@ public:
     {
         return stateMachineState;
     }
+
 
 
 private:
