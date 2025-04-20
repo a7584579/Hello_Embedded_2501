@@ -2,6 +2,9 @@
 #define CAMERA_MODULE_HANDLE_H
 
 #include <QObject>
+#include <QThread>
+#include <QDebug>
+#include "quickopencv.h"
 
 class Camera_Module_Handle : public QObject
 {

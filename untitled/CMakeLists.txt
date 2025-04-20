@@ -9,6 +9,12 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+message("be sure you have set your Opencv path properly")
+set(OpenCV_DIR "./opencv4.11.0/lib/cmake/opencv4")
+
+find_package(OpenCV 4.11 REQUIRED)
+message("find OpenCV version:${OpenCV_VERSION}")
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core)
@@ -16,6 +22,8 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 #qt_standard_project_setup()
 
 include_directories(./header)
+include_directories(${OpenCV_INCLUDE_DIRS})
+message("find OpenCV include directories:${OpenCV_INCLUDE_DIRS}")
 #add_subdirectory(src/app)
 
 
@@ -37,6 +45,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ./header/core_module_handle.h ./src/core_module_handle.cpp
         ./header/public_variable.h
         Resource.qrc
+        tester.h tester.cpp
+        quickopencv.h quickopencv.cpp
+        opencv4.11.0/include/opencv4/opencv2/opencv.hpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET untitled APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -58,6 +69,7 @@ endif()
 
 target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(untitled PRIVATE Qt6::Core)
+target_link_libraries(untitled PRIVATE ${OpenCV_LIBS})
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
