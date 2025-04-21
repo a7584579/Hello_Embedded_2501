@@ -117,5 +117,9 @@ Code_Space:  It is utilized to place our code and some related documents. Every 
 
 ## Lisence
 This project is licensed under the MIT License.
+## Social Media
+Instagram: [https://www.instagram.com/moodcafe_realtime](https://www.instagram.com/moodcafe_realtime?igsh=MW1mZmY5bWo1OWtocQ%3D%3D&utm_source=qr)  
+TikTok: [https://www.tiktok.com/@mood_coffee_realtime](https://www.tiktok.com/@mood_coffee_realtime?_t=ZN-8vZu8KfJSHG&_r=1)  
+YouTube: [https://youtu.be/QFT3A7u-bKY](https://youtu.be/QFT3A7u-bKY?si=9AdZxWDZZp56725b)
 ## Contacts
 If you have any questions or suggestions, please contact a758457953@gmail.com or visit the project's GitHub page and leave your comments.
