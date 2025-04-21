@@ -1,0 +1,18 @@
+# ninja log v6
+2	874	1741388054706619572	test2_autogen/timestamp	7da6a1ad74dad41b
+882	6608	1741388054727619069	CMakeFiles/test2.dir/Sensor_Module.cpp.o	bfd25ecd2b934a96
+2	874	1741388054706619572	test2_autogen/mocs_compilation.cpp	7da6a1ad74dad41b
+2	874	1741388054706619572	/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/test2_autogen/mocs_compilation.cpp	7da6a1ad74dad41b
+2	874	1741388054706619572	/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/test2_autogen/timestamp	7da6a1ad74dad41b
+878	2482	1741388054724619140	CMakeFiles/test2.dir/MAX30102.cpp.o	15986c8047f9958c
+877	6592	1741388054723619164	CMakeFiles/test2.dir/main.cpp.o	b61bb0a945b3355d
+876	5991	1741388054721619212	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.o	fc71beb4c63571cc
+6608	7188	1741388060454482083	test2	3182f0a0cf1b3a81
+14	1002	1741388872726267306	test2_autogen/timestamp	7da6a1ad74dad41b
+14	1002	1741388872726267306	test2_autogen/mocs_compilation.cpp	7da6a1ad74dad41b
+14	1002	1741388872726267306	/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/test2_autogen/timestamp	7da6a1ad74dad41b
+14	1002	1741388872726267306	/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/test2_autogen/mocs_compilation.cpp	7da6a1ad74dad41b
+1003	5981	1741388872743267040	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.o	fc71beb4c63571cc
+1010	6624	1741388872751266914	CMakeFiles/test2.dir/sensor_module.cpp.o	342e81c87a5418f8
+1005	6647	1741388872746266993	CMakeFiles/test2.dir/main.cpp.o	b61bb0a945b3355d
+6648	7310	1741388878389178581	test2	4c02aeaf949d0e16

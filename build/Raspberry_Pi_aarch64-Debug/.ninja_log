@@ -1,0 +1,11 @@
+# ninja log v6
+2	26	1741389628833169336	CMakeFiles/clean.additional	9c622520dded750f
+27	46	1741389628857170709	clean	21940f3577443389
+3	868	1741389629762222412	test2_autogen/timestamp	16faeeec12a36a4b
+3	868	1741389629762222412	test2_autogen/mocs_compilation.cpp	16faeeec12a36a4b
+3	868	1741389629762222412	/home/zjt/Qt/prj/test2/build/Raspberry_Pi_aarch64-Debug/test2_autogen/timestamp	16faeeec12a36a4b
+3	868	1741389629762222412	/home/zjt/Qt/prj/test2/build/Raspberry_Pi_aarch64-Debug/test2_autogen/mocs_compilation.cpp	16faeeec12a36a4b
+871	2896	1741389629782223554	CMakeFiles/test2.dir/MAX30102.cpp.o	c48d1fa2eb3d77a7
+869	8229	1741389629781223497	CMakeFiles/test2.dir/test2_autogen/mocs_compilation.cpp.o	7c41def8a8fe1763
+872	8314	1741389629783223612	CMakeFiles/test2.dir/sensor_module.cpp.o	21ab81b2ecee2f55
+870	9025	1741389629781223497	CMakeFiles/test2.dir/main.cpp.o	df309744063404bc

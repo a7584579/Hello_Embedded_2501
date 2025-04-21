@@ -1,0 +1,9 @@
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/test2.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/edit_cache.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/rebuild_cache.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/list_install_components.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/install.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/install/local.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/install/strip.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/test2_autogen_timestamp_deps.dir
+/home/zjt/Qt/prj/test2/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/test2_autogen.dir
