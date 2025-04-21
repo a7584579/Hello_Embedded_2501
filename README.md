@@ -100,23 +100,26 @@ Open your repository on GitHub, click the Compare & Pull Request button, fill in
 #### Notice
 Code_Space:  It is utilized to place our code and some related documents. Every file and folder should be documented to clarify your structures. And Readme.md must be written for every file folder.
 ## Repository_Structure
+                
+Hello_Embedded_2501/
+├── README.md                  # Project overview and usage instructions
+├── LICENSE                    # License file (MIT or similar)
+├── .gitignore                 # Files and directories to be ignored by Git
+├── untitled/                  # Main project source directory
+│   ├── build/                 # (Optional) Build output directory
+│   ├── images/                # UI screenshots, system diagrams, poster assets
+│   ├── include/               # Header files for core logic (e.g., sensors, control)
+│   ├── qt_ui/                 # Qt GUI components (e.g., mainwindow.ui, UI classes)
+│   ├── src/                   # Main application logic (mood detection, device control)
+│   │   └── main.cpp           # Program entry point
+│   └── daemon/                # Real-time background services and callbacks
 
-	Hello_Embedded_2501
-		|Documents				#Used for placing some helpful documents
-		|Source					#Used for placing source codes
-		|---|Image_Handle			#Source codes about Image processing
-		|---|---Readme.md
-		|---|Biosensor_Handle			#Source codes about geting biosensor data
-		|---|---Readme.md
-		|---|Screen_Handle			#Source codes for screen interaction
-		|---|---Readme.md
-		|---Readme.md
-		|Head
-		|---|Image_Handle
-		|---|---Image_Handle.h
-		|Tools					#Used for placingt some useful assistances
-		|---|Readme.md
-		|Readme.md
+
+> This repository separates GUI (Qt-based) and core logic.
+> The `src/` and `daemon/` directories contain real-time components using C++11 threading and callbacks. 
+> The `qt_ui/` folder is reserved strictly for visual interaction (Qt only).
+> All code is deployed and tested on Raspberry Pi OS (Debian).
+
 
 ## Lisence
 This project is licensed under the MIT License.
