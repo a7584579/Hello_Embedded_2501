@@ -41,29 +41,21 @@ int main(int argc, char *argv[])
     pid_t id=fork();
     if(id==0)
     {
-        //this is child process(QT process)
-        //child process use fd[1] send heartbeat to parent process
-        //child process use fd[0] receive motion detetor message
-        //feed dog should be implement in other thread of child process, not within main function
-        //wait for implementing
-        //close(fd[0]);
         int i=0;
 
         QApplication a(argc, argv);
         MainWindow w;
+
+        w.setupSensorMonitor(fd[0]);
+        
         w.show();
         a.exec();
 
     }
     else if(id>0)
     {
-        //this is parent process
-        //parent process regularly check
-        //parent process use fd[1] send motion detetor message
-        //parent process use fd[0] receive heartbeat from child process
-        //close(fd[1]);
-        //do period check in other thread of parent process, not within main function
-        //wait for add
+        std::thread gpioThread(gpio_monitor, fd[1]);
+        gpioThread.detach();
 
     }
     else

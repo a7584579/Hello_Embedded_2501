@@ -559,3 +559,70 @@ void MainWindow::Heartrate_Image_Display_Tab3_Slot()
 {
     ui->label_2->setText("70");
 }
+
+void SensorMonitorThread::run() {
+    char buffer[1];
+    while (true) {
+        ssize_t n = read(readFd, buffer, 1);
+        if (n > 0) {
+            if (buffer[0] == '1') {
+                emit personDetected();
+            } else if (buffer[0] == '0') {
+                emit noPersonDetected();
+            }
+        }
+        msleep(200);
+    }
+}
+
+void MainWindow::setupSensorMonitor() {
+    sensorThread = new SensorMonitorThread(readFd, this);
+    connect(sensorThread, &SensorMonitorThread::personDetected, this, &MainWindow::onPersonDetected);
+    connect(sensorThread, &SensorMonitorThread::noPersonDetected, this, &MainWindow::onNoPersonDetected);
+    sensorThread->start();
+
+    sleepTimer = new QTimer(this);
+    sleepTimer->setInterval(30000); // 30 秒
+    connect(sleepTimer, &QTimer::timeout, this, &MainWindow::enterSleepMode);
+}
+
+void MainWindow::onPersonDetected() {
+    if (stateMachineState == coffeeMachine_State_Sleep) {
+        stateMachineState = coffeeMachine_State_Startup;
+        qDebug() << "Waking up...";
+    }
+    sleepTimer->stop(); 
+}
+
+void MainWindow::onNoPersonDetected() {
+    if (!sleepTimer->isActive())
+        sleepTimer->start(); 
+}
+
+void MainWindow::enterSleepMode() {
+    stateMachineState = coffeeMachine_State_Sleep;
+    qDebug() << "Entering sleep mode.";
+}
+
+void gpio_monitor(int writeFd) {
+    const char* chipname = "gpiochip0";
+    const int line_num = 6;
+
+    gpiod_chip* chip = gpiod_chip_open_by_name(chipname);
+    gpiod_line* line = gpiod_chip_get_line(chip, line_num);
+    gpiod_line_request_input(line, "gpio_monitor");
+
+    int lastVal = -1;
+    while (true) {
+        int val = gpiod_line_get_value(line);
+        if (val != lastVal) {
+            char msg = val ? '1' : '0';
+            write(writeFd, &msg, 1);
+            lastVal = val;
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    }
+
+    gpiod_line_release(line);
+    gpiod_chip_close(chip);
+}

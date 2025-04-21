@@ -8,6 +8,8 @@
 #include <QTimer>
 #include <QMutex>
 #include <QMutexLocker>
+#include <gpiod.h>
+#include <thread>
 #include "public_variable.h"
 
 
@@ -16,6 +18,25 @@ namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
+
+SensorMonitorThread* sensorThread;
+QTimer* sleepTimer;
+
+class SensorMonitorThread : public QThread {
+    Q_OBJECT
+public:
+    SensorMonitorThread(int readFd, QObject* parent = nullptr)
+        : QThread(parent), readFd(readFd) {}
+
+    void run() override;
+
+signals:
+    void personDetected();
+    void noPersonDetected();
+
+private:
+    int readFd;
+};
 
 class MainWindow : public QMainWindow
 {
@@ -88,10 +109,14 @@ private slots:
     void PushButton4_Clicked_Slot();
     void PushButton5_Clicked_Slot();
     void PushButton6_Clicked_Slot();
-
     void PushButton8_Clicked_Slot();
     void PushButton12_Clicked_Slot();
     void PushButton17_Clicked_Slot();
+
+    void setupSensorMonitor(int readFd);
+    void onPersonDetected();
+    void onNoPersonDetected();
+    void enterSleepMode();
 
     void Enter_Test_Page();
     void Quit_Test_Page();
@@ -133,4 +158,7 @@ signals:
     void IO_ChangeRequest(bool IO_State,unsigned char IO_Num);
 
 };
+
+void gpio_monitor(int writeFd);
+
 #endif // MAINWINDOW_H
