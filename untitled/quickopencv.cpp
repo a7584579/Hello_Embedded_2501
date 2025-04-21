@@ -731,10 +731,10 @@ void quickopenCV::camera_preparation()
 }
 
 
-void quickopenCV::picture_capture(std::string path)
+char quickopenCV::picture_capture(std::string path)
 {
     //cv::VideoCapture capture("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.mp4");
-    bool indicatior;
+    char returnValue=0;
     cv::Mat frame;
     capture->read(frame);
     //frame = cv::imread("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.png");
@@ -742,8 +742,40 @@ void quickopenCV::picture_capture(std::string path)
     {
         //cv::imwrite("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/RealtimeVideo.png",frame);
 
+        std::string pb_file_path = "/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/opencv_face_detector_uint8.pb";
+        std::string pbtxt_file_path = "/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/opencv_face_detector.pbtxt";
+
+
+        cv::dnn::Net net = cv::dnn::readNetFromTensorflow(pb_file_path, pbtxt_file_path);
+
+        cv::Mat blob = cv::dnn::blobFromImage(frame, 1.0, cv::Size(300, 300), cv::Scalar(104, 177, 123));
+        net.setInput(blob);
+        cv::Mat probs = net.forward();
+        //1x1xNx7
+
+        cv::Mat detectMat(probs.size[2], probs.size[3], CV_32F, probs.ptr<float>());
+        for (int row = 0; row < detectMat.rows; row++)
+        {
+            float conf = detectMat.at<float>(row, 2);
+            if (conf > 0.5)
+            {
+                float x1 = detectMat.at<float>(row, 3)*frame.cols;
+                float y1 = detectMat.at<float>(row, 4) * frame.rows;
+                float x2 = detectMat.at<float>(row, 5) * frame.cols;
+                float y2 = detectMat.at<float>(row, 6) * frame.rows;
+
+                cv::Rect box(x1, y1, x2 - x1, y2 - y1);
+                cv::rectangle(frame, box, cv::Scalar(0, 0, 255), 2, 8);
+                returnValue=(conf*100);
+            }
+        }
+
         cv::imwrite(path,frame);
+
+
     }
     //capture->release();
+    if(returnValue>100)returnValue=100;
+    return returnValue;
 }
 

@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     Actuator_Module_Init();
     Audio_Module_Init();
     Sensor_Module_Init();
-    Core_Module_Init();
 
 
     Test_Page_Init();
@@ -142,7 +141,6 @@ void MainWindow::Dynamic_checkingCompleteChange_slot()
     ChangeCurrentMachineState(coffeeMachine_State_Ready);
     stateMachineState=coffeeMachine_State_Ready;
     System_Ready.tryLock();
-    emit Core_Thread_Start();
 }
 
 void MainWindow::Dynamic_showing_Timer_slot()
@@ -247,6 +245,9 @@ void MainWindow::Camera_Module_Init()
     connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(PicRead()),this,SLOT(label_Pic_Show_slot()));
     connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(PicRead()),this,SLOT(test_Pic_Show_slot()));
 
+    connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(MoodStable(char)),this,SLOT(Mood_Judge_slot(char)));
+
+
     if(!Public_Varaible_Instant.Camera_Module_Thread.isRunning())
     {
         qDebug()<<"Camera_Module_Thread started";
@@ -310,24 +311,6 @@ void MainWindow::Sensor_Module_Init()
 }
 
 
-void MainWindow::Core_Module_Init()
-{
-    Core_Module_Instant=new Core_Module_Handle(this);
-    Core_Module_Instant->moveToThread(&Core_Module_Thread);
-
-    connect(this,SIGNAL(Core_Thread_Start()),Core_Module_Instant,SLOT(Core_Module_Run()));
-
-
-
-
-    if(!Core_Module_Thread.isRunning())
-    {
-        qDebug()<<"Core_Module_Thread started";
-        Core_Module_Thread.start();
-    }
-}
-
-
 void MainWindow::MainWindowButton_Init()
 {
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(PushButton_Clicked_Slot()));
@@ -341,8 +324,9 @@ void MainWindow::MainWindowButton_Init()
 
     connect(ui->pushButton_8, SIGNAL(clicked()), this, SLOT(PushButton8_Clicked_Slot()));
 
-
+    connect(ui->pushButton_12, SIGNAL(clicked()), this, SLOT(PushButton12_Clicked_Slot()));
     connect(ui->pushButton_15, SIGNAL(clicked()), this, SLOT(PushButton15_Clicked_Slot()));
+    connect(ui->pushButton_17, SIGNAL(clicked()), this, SLOT(PushButton17_Clicked_Slot()));
 
     connect(ui->actionEnter_test_mode,SIGNAL(triggered()),this,SLOT(Enter_Test_Page()));
 
@@ -374,6 +358,7 @@ void MainWindow::Failed_showing_Info_slot(QString text)
 
 void MainWindow::PushButton_Clicked_Slot()
 {
+    ui->label_41->setText("-");
     ui->tabWidget->setCurrentIndex(INDEX_OF_PROCESSINGPAGE1_EMOTION);
     MachinePage=INDEX_OF_PROCESSINGPAGE1_EMOTION;
     stateMachineState=coffeeMachine_State_Processing;
@@ -382,6 +367,8 @@ void MainWindow::PushButton_Clicked_Slot()
 
 void MainWindow::PushButton2_Clicked_Slot()
 {
+    ui->label_44->setText("-");
+    ui->label_45->setText("-");
     ui->tabWidget->setCurrentIndex(INDEX_OF_PROCESSINGPAGE2_PHYSICS);
     MachinePage=INDEX_OF_PROCESSINGPAGE2_PHYSICS;
     stateMachineState=coffeeMachine_State_Processing;
@@ -389,12 +376,20 @@ void MainWindow::PushButton2_Clicked_Slot()
 
 void MainWindow::PushButton3_Clicked_Slot()
 {
+
     ui->tabWidget->setCurrentIndex(INDEX_OF_PROCESSINGPAGE3_FORMULA);
     MachinePage=INDEX_OF_PROCESSINGPAGE3_FORMULA;
     stateMachineState=coffeeMachine_State_Processing;
 }
 
 void MainWindow::PushButton8_Clicked_Slot()
+{
+    ui->tabWidget->setCurrentIndex(INDEX_OF_PROCESSINGPAGE4_MAKING);
+    MachinePage=INDEX_OF_PROCESSINGPAGE4_MAKING;
+    stateMachineState=coffeeMachine_State_making;
+}
+
+void MainWindow::PushButton12_Clicked_Slot()
 {
     ui->tabWidget->setCurrentIndex(INDEX_OF_PROCESSINGPAGE4_MAKING);
     MachinePage=INDEX_OF_PROCESSINGPAGE4_MAKING;
@@ -423,6 +418,12 @@ void MainWindow::PushButton6_Clicked_Slot()
     stateMachineState=coffeeMachine_State_Ready;
 }
 
+void MainWindow::PushButton17_Clicked_Slot()
+{
+    ui->tabWidget->setCurrentIndex(INDEX_OF_READYPAGE);
+    MachinePage=INDEX_OF_READYPAGE;
+    stateMachineState=coffeeMachine_State_Ready;
+}
 
 
 void MainWindow::PushButton9_Clicked_Slot()//Pump IO check
@@ -462,8 +463,11 @@ void MainWindow::PushButton15_Clicked_Slot()//override self check pass
 
 void MainWindow::Enter_Test_Page()
 {
+    if(ui->tabWidget->currentIndex()==INDEX_OF_MAINTAINPAGE)goto end;
     last_Page=ui->tabWidget->currentIndex();
     ui->tabWidget->setCurrentIndex(INDEX_OF_MAINTAINPAGE);
+
+    end:
     MachinePage=INDEX_OF_MAINTAINPAGE;
 }
 
@@ -494,6 +498,12 @@ void MainWindow::Sensor_Module_Ready_Slot()
     Sensor_Module_Ready.tryLock();
 }
 
+
+void MainWindow::Mood_Judge_slot(char mood_Value)//Show realtime pic on user gui
+{
+    if(mood_Value>50)ui->label_41->setText("happy");
+    else ui->label_41->setText("unhappy");
+}
 
 void MainWindow::label_Pic_Show_slot()//Show realtime pic on user gui
 {
@@ -539,7 +549,7 @@ void MainWindow::test_Pic_Show_slot()//Show realtime pic on test page
 
         QPixmap input;
         input.convertFromImage(image);
-        input.scaled(300,200);
+        input.scaled(300,200,Qt::IgnoreAspectRatio);
 
         ui->label_25->setPixmap(input);
     }

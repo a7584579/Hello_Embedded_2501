@@ -62,7 +62,7 @@ public:
     void bilateral_blur_demo(cv::Mat& image);
 
     void camera_preparation();
-    void picture_capture(std::string);
+    char picture_capture(std::string);
 private :
     cv::VideoCapture *capture;
 };

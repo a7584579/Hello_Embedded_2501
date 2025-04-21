@@ -6,7 +6,6 @@
 #include "camera_module_handle.h"
 #include "actuator_module_handle.h"
 #include "audio_module_handle.h"
-#include "core_module_handle.h"
 #include "sensor_module.h"
 #include <QMutex>
 
@@ -39,6 +38,10 @@ extern void Public_Varaible_Init();
 extern uint8_t CurrentMachineState();
 extern void ChangeCurrentMachineState(int state);
 extern uint8_t MachinePage;
+
+extern int fd[2];//process comm
+//write(fd[1],(void*)child.data(),child.length());
+//read(fd[0],msg,sizeof(msg));
 
 enum CoffeeMachine_State
 {

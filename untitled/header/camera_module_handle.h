@@ -27,6 +27,7 @@ private slots:
 signals:
     void Module_Ready();
     void PicRead();
+    void MoodStable(char);
 };
 
 #endif // CAMERA_MODULE_HANDLE_H

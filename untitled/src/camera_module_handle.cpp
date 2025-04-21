@@ -19,9 +19,19 @@ Camera_Module_Handle::Camera_Module_Handle(QObject *parent)
 void Camera_Module_Handle::Camera_Frame_Fresh()
 {
     //Frame_Fresh_Timer->stop();
+    static int mood_steady_count=0;
+    char valueOfMood;
 
     std::string path=REALTIME_PIC_PATH;
-    opencv_Instant->picture_capture(path);
+    if(opencv_Instant->picture_capture(path)>50)
+    {
+        mood_steady_count++;
+        if(mood_steady_count>100)mood_steady_count=100;
+    }
+    else
+    {
+        mood_steady_count=0;
+    }
 
     if(Access_for_Camera_Pic.tryLock(5))
     {
@@ -36,6 +46,11 @@ void Camera_Module_Handle::Camera_Frame_Fresh()
         }
         Access_for_Camera_Pic.unlock();
         emit PicRead();
+        if(mood_steady_count>40)
+        {
+            valueOfMood=60;
+            emit MoodStable(valueOfMood);
+        }
     }
 
     Frame_Fresh_Timer->start();

@@ -55,11 +55,6 @@ private:
 
 
 
-    void Core_Module_Init();
-
-
-
-
 
     //For test page
     int last_Page=-1;
@@ -67,7 +62,7 @@ private:
 
     //Core
     QThread Core_Module_Thread;
-    Core_Module_Handle* Core_Module_Instant=nullptr;
+
 
 
 private slots:
@@ -95,6 +90,8 @@ private slots:
     void PushButton6_Clicked_Slot();
 
     void PushButton8_Clicked_Slot();
+    void PushButton12_Clicked_Slot();
+    void PushButton17_Clicked_Slot();
 
     void Enter_Test_Page();
     void Quit_Test_Page();
@@ -121,15 +118,15 @@ public slots:
     void label_Pic_Show_slot();//Show realtime pic on user gui
     void test_Pic_Show_slot();//Show realtime pic on user gui
 
+    //For mood judging
+    void Mood_Judge_slot(char);//Show realtime pic on user gui
+
 signals:
     //For camera init
     void Start_Camera_Fresh();
     void Start_Actuator();
     void Start_Audio();
     void Start_Sensor();
-
-    //For state machine start
-    void Core_Thread_Start();
 
 
     //For IO changing

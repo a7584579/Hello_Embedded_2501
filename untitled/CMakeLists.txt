@@ -45,10 +45,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ./header/camera_module_handle.h ./src/camera_module_handle.cpp
         ./header/audio_module_handle.h ./src/audio_module_handle.cpp
         ./header/actuator_module_handle.h ./src/actuator_module_handle.cpp
-        ./header/core_module_handle.h ./src/core_module_handle.cpp
         ./header/public_variable.h
         Resource.qrc
-        tester.h tester.cpp
         quickopencv.h quickopencv.cpp
         opencv4.11.0/include/opencv4/opencv2/opencv.hpp
     )
