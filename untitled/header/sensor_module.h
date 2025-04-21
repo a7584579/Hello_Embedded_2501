@@ -14,7 +14,11 @@ public:
     uint8_t HeartbeatValueHandle();
     uint8_t SP2O_ValueHandle();
     uint8_t SelfCheckHandle();
+
+public slots:
+    void Sensor_Module_Start_Slot();
 signals:
+    void Module_Ready();
 };
 
 #endif // SENSOR_MODULE_H

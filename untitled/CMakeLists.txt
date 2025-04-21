@@ -10,7 +10,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 message("be sure you have set your Opencv path properly")
-set(OpenCV_DIR "./opencv4.11.0/lib/cmake/opencv4")
+set(OpenCV_DIR "~/Desktop/LocalWorkSpace/embedded-courses/untitled/opencv4.11.0/lib/cmake/opencv4")
+
+#find_package(gpiod)
 
 find_package(OpenCV 4.11 REQUIRED)
 message("find OpenCV version:${OpenCV_VERSION}")
@@ -18,6 +20,7 @@ message("find OpenCV version:${OpenCV_VERSION}")
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+ find_package(Qt6 REQUIRED COMPONENTS Gui)
 
 #qt_standard_project_setup()
 
@@ -67,9 +70,13 @@ else()
     endif()
 endif()
 
+link_directories(/usr/lib/x86_64-linux-gnu)
+
 target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(untitled PRIVATE Qt6::Core)
-target_link_libraries(untitled PRIVATE ${OpenCV_LIBS})
+target_link_libraries(untitled PRIVATE ${OpenCV_LIBS} gpiod)
+target_link_libraries(untitled PRIVATE Qt6::Gui)
+#target_link_libraries(untitled PRIVATE gpiod)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

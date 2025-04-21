@@ -1,9 +1,8 @@
 #include "quickopencv.h"
 
+static cv::VideoCapture capture;
 
-
-quickopenCV::quickopenCV(QObject *parent)
-    : QObject{parent}
+quickopenCV::quickopenCV()
 {
 
 
@@ -490,7 +489,7 @@ void quickopenCV::rotate_demo(cv::Mat& image)
 }
 
 
-void quickopenCV::video_demo(cv::Mat& image)
+void quickopenCV::video_demo()
 {
     //VideoCapture capture("G:/VisualAlgorthym/2.mp4");
     cv::VideoCapture capture(0);
@@ -712,5 +711,40 @@ void quickopenCV::bilateral_blur_demo(cv::Mat& image)
 
     cv::waitKey(0);
     cv::destroyAllWindows();
+}
+
+
+
+
+void quickopenCV::camera_preparation()
+{
+    //cv::VideoCapture capture("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.mp4");
+    int deviceID = 0;             // 0 = open default camera
+    int apiID = cv::CAP_ANY;      // 0 = autodetect default API
+    // open selected camera using selected API
+    capture.open(deviceID, apiID);
+
+    if (!capture.isOpened()) {
+        std::cout << "ERROR! Unable to open camera\n";
+        return ;
+    }
+    //capture.release();
+}
+
+
+void quickopenCV::picture_capture(std::string path)
+{
+    //cv::VideoCapture capture("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.mp4");
+
+    cv::Mat frame;
+    capture.read(frame);
+    //frame = cv::imread("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.png");
+    if (!frame.empty())
+    {
+        //cv::imwrite("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/RealtimeVideo.png",frame);
+
+        cv::imwrite(path,frame);
+    }
+    capture.release();
 }
 
