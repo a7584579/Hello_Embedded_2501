@@ -11,7 +11,7 @@ An intelligent coffee brewing system that understands your physical and emotiona
 
 This project was developed by Group 17 as part of the **Real-Time Embedded Coding** course at the University of Glasgow (2025). Our system integrates **biological signal monitoring** and **emotional state recognition** to personalize coffee recommendations.
 
-The coffee machine not only detects your presence but also monitors heart rate, blood oxygen levels, and facial expressions to deduce your emotional state. Based on this, it recommends a drink and automatically starts brewing — providing a smart and delightful coffee experience.
+The coffee machine not only detects your presence but also monitors heart rate, blood oxygen levels, and facial expressions to deduce your emotional state. Based on this, it recommends a drink and automatically starts brewing — providing a smart and delightful coffee experience.  
 <img src="untitled/images/b7445c49d7c27790b5be8c8ce7444f5.png" width="600"/>
 <img src="untitled/images/af0808a31174686dbc31396a74ebcaf.png" width="600"/>
 
@@ -100,20 +100,21 @@ Open your repository on GitHub, click the Compare & Pull Request button, fill in
 #### Notice
 Code_Space:  It is utilized to place our code and some related documents. Every file and folder should be documented to clarify your structures. And Readme.md must be written for every file folder.
 ## Repository_Structure
-                
-Hello_Embedded_2501/
-├── README.md                  # Project overview and usage instructions
-├── LICENSE                    # License file (MIT or similar)
-├── .gitignore                 # Files and directories to be ignored by Git
-├── untitled/                  # Main project source directory
-│   ├── build/                 # (Optional) Build output directory
-│   ├── images/                # UI screenshots, system diagrams, poster assets
-│   ├── include/               # Header files for core logic (e.g., sensors, control)
-│   ├── qt_ui/                 # Qt GUI components (e.g., mainwindow.ui, UI classes)
-│   ├── src/                   # Main application logic (mood detection, device control)
-│   │   └── main.cpp           # Program entry point
-│   └── daemon/                # Real-time background services and callbacks
 
+```                
+Hello_Embedded_2501/  
+├── README.md                  # Project overview and usage instructions    
+├── LICENSE                    # License file (MIT or similar)  
+├── .gitignore                 # Files and directories to be ignored by Git  
+├── untitled/                  # Main project source directory  
+│   ├── build/                 # (Optional) Build output directory  
+│   ├── images/                # UI screenshots, system diagrams, poster assets  
+│   ├── include/               # Header files for core logic (e.g., sensors, control)  
+│   ├── qt_ui/                 # Qt GUI components (e.g., mainwindow.ui, UI classes)  
+│   ├── src/                   # Main application logic (mood detection, device control)  
+│   │   └── main.cpp           # Program entry point  
+│   └── daemon/                # Real-time background services and callbacks  
+```
 
 > This repository separates GUI (Qt-based) and core logic.
 > The `src/` and `daemon/` directories contain real-time components using C++11 threading and callbacks. 
