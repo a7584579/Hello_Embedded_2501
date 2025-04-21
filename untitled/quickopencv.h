@@ -63,6 +63,8 @@ public:
 
     void camera_preparation();
     void picture_capture(std::string);
+private :
+    cv::VideoCapture *capture;
 };
 
 

@@ -244,6 +244,9 @@ void MainWindow::Camera_Module_Init()
     connect(this,SIGNAL(Start_Camera_Fresh()),Public_Varaible_Instant.Camera_Module_Instant,SLOT(Camera_Fresh_Start_Slot()));
     connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(Module_Ready()),this,SLOT(Camera_Module_Ready_Slot()));
 
+    connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(PicRead()),this,SLOT(label_Pic_Show_slot()));
+    connect(Public_Varaible_Instant.Camera_Module_Instant,SIGNAL(PicRead()),this,SLOT(test_Pic_Show_slot()));
+
     if(!Public_Varaible_Instant.Camera_Module_Thread.isRunning())
     {
         qDebug()<<"Camera_Module_Thread started";
@@ -314,8 +317,7 @@ void MainWindow::Core_Module_Init()
 
     connect(this,SIGNAL(Core_Thread_Start()),Core_Module_Instant,SLOT(Core_Module_Run()));
 
-    connect(Core_Module_Instant,SIGNAL(User_GUI_Face_Pic_Fresh()),this,SLOT(label_Pic_Show_slot()));
-    connect(Core_Module_Instant,SIGNAL(Test_GUI_Face_Pic_Fresh()),this,SLOT(test_Pic_Show_slot()));
+
 
 
     if(!Core_Module_Thread.isRunning())
@@ -522,21 +524,24 @@ void MainWindow::test_Pic_Show_slot()//Show realtime pic on test page
 {
     if( ui->tabWidget->currentIndex()==INDEX_OF_MAINTAINPAGE)
     {
-        QPicture pic1;
+        QImage image;
+        //image.load(PUB_REALTIME_PIC_PATH);
         if(Access_for_Camera_Pic.tryLock(5))
         {
-            pic1.load(PUB_REALTIME_PIC_PATH);
+            image.load(PUB_REALTIME_PIC_PATH);
             Access_for_Camera_Pic.unlock();
         }
-
-        if(pic1.size()==0)
+        if(image.isNull())
         {
+            //qDebug()<<"image read failed";
+            return ;
+        }
 
-        }
-        else
-        {
-            ui->label_25->setPicture(pic1);
-        }
+        QPixmap input;
+        input.convertFromImage(image);
+        input.scaled(300,200);
+
+        ui->label_25->setPixmap(input);
     }
 }
 

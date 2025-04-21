@@ -35,7 +35,9 @@ void Camera_Module_Handle::Camera_Frame_Fresh()
             std::cout<<"copy failed";
         }
         Access_for_Camera_Pic.unlock();
+        emit PicRead();
     }
+
     Frame_Fresh_Timer->start();
 }
 

@@ -16,14 +16,5 @@ void Core_Module_Handle::Core_ScreenFresh_Slot()
 {
     char CurrentPage=MachinePage;
 
-    if((CurrentMachineState()==coffeeMachine_State_Processing) && (CurrentPage==INDEX_OF_PROCESSINGPAGE1_EMOTION))
-    {
-        emit User_GUI_Face_Pic_Fresh();
-    }
-
-    if(CurrentPage==INDEX_OF_MAINTAINPAGE)
-    {
-        emit Test_GUI_Face_Pic_Fresh();
-    }
     Screen_Fresh_Timer->start();
 }

@@ -1,7 +1,5 @@
 #include "quickopencv.h"
 
-static cv::VideoCapture capture;
-
 quickopenCV::quickopenCV()
 {
 
@@ -719,12 +717,13 @@ void quickopenCV::bilateral_blur_demo(cv::Mat& image)
 void quickopenCV::camera_preparation()
 {
     //cv::VideoCapture capture("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.mp4");
+    capture=new cv::VideoCapture;
     int deviceID = 0;             // 0 = open default camera
     int apiID = cv::CAP_ANY;      // 0 = autodetect default API
     // open selected camera using selected API
-    capture.open(deviceID, apiID);
+    capture->open(deviceID, apiID);
 
-    if (!capture.isOpened()) {
+    if (!capture->isOpened()) {
         std::cout << "ERROR! Unable to open camera\n";
         return ;
     }
@@ -735,9 +734,9 @@ void quickopenCV::camera_preparation()
 void quickopenCV::picture_capture(std::string path)
 {
     //cv::VideoCapture capture("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.mp4");
-
+    bool indicatior;
     cv::Mat frame;
-    capture.read(frame);
+    capture->read(frame);
     //frame = cv::imread("/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/1.png");
     if (!frame.empty())
     {
@@ -745,6 +744,6 @@ void quickopenCV::picture_capture(std::string path)
 
         cv::imwrite(path,frame);
     }
-    capture.release();
+    //capture->release();
 }
 
