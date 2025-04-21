@@ -1,0 +1,16 @@
+# This file is managed by Qt Creator, do not edit!
+
+set("CMAKE_COLOR_DIAGNOSTICS" "ON" CACHE "BOOL" "" FORCE)
+set("CMAKE_CXX_COMPILER" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++" CACHE "STRING" "" FORCE)
+set("CMAKE_C_COMPILER" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc" CACHE "STRING" "" FORCE)
+set("CMAKE_GENERATOR" "Unix Makefiles" CACHE "STRING" "" FORCE)
+set("CMAKE_BUILD_TYPE" "Debug" CACHE "STRING" "" FORCE)
+set("CMAKE_PREFIX_PATH" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/cortexa72-poky-linux/usr" CACHE "STRING" "" FORCE)
+set("CMAKE_C_COMPILER_TARGET" "aarch64-poky-linux" CACHE "STRING" "" FORCE)
+set("CMAKE_MAKE_PROGRAM" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_SYSROOT" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/cortexa72-poky-linux" CACHE "PATH" "" FORCE)
+set("QT_QMAKE_EXECUTABLE" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/qmake" CACHE "STRING" "" FORCE)
+set("CMAKE_PROJECT_INCLUDE_BEFORE" "/home/cublwolf/Documents/ENV/embedded-courses-master/untitled/build/Boot2Qt_6_7_3_Raspberry_Pi_4_64_bit-Debug/.qtc/package-manager/auto-setup.cmake" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_CXX_FLAGS_INIT" "-DQT_QML_DEBUG" CACHE "STRING" "" FORCE)
+set("CMAKE_CXX_COMPILER_TARGET" "aarch64-poky-linux" CACHE "STRING" "" FORCE)
+set("CMAKE_TOOLCHAIN_FILE" "/home/cublwolf/Qt/6.7.3/Boot2Qt/raspberrypi4-64/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake" CACHE "FILEPATH" "" FORCE)
