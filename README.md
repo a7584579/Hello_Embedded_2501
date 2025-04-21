@@ -1,19 +1,53 @@
-# Project name
-Hello_Embedded_2501-A Smart Coffee Machine
+# 📒 Project name
+Hello_Embedded_2501-A Smart Emotion-Aware Coffee Machine
 
 This is a repository established by a group of interesting people to create something truly enjoyable. We are thrilled and dedicated to this little charming hand-made craft. 
 
 The project is a smart coffee machine based on the Raspberry PI 5 to recognize images and heart rate signals, adjust the coffee formula to improve the quality of the user's mood.
+
+An intelligent coffee brewing system that understands your physical and emotional state before making the perfect cup — just for you.
+
+![Smart Coffee Machine Banner](https://user-images.githubusercontent.com/your-image-placeholder/banner.jpg)
+
+## 📌 Overview
+
+This project was developed by Group 17 as part of the **Real-Time Embedded Coding** course at the University of Glasgow (2025). Our system integrates **biological signal monitoring** and **emotional state recognition** to personalize coffee recommendations.
+
+The coffee machine not only detects your presence but also monitors heart rate, blood oxygen levels, and facial expressions to deduce your emotional state. Based on this, it recommends a drink and automatically starts brewing — providing a smart and delightful coffee experience.
+
+### 🎯 Real-time Interaction
+- **Wake-up Detection:** Uses PIR (e.g., HC-SR501) infrared sensors to wake the system when a user approaches.
+- **Sleep Detection:** Enters low-power mode when no human presence is detected after some time.
+
+### 🧠 Emotional & Physical State Recognition
+- **Camera module** analyzes facial expressions (happy/unhappy).
+- **Pulse oximeter module** detects real-time heart rate and SpO₂ levels.
+
+### ☕ Smart Coffee Making
+- Personalized coffee suggestions based on user mood and health data.
+- Manual override: users can choose their favorite drink manually.
+- Friendly on-screen interaction and music during brewing.
+
+### ✅ Status Feedback
+- Notifies user when coffee is ready.
+- Uses weight/laser sensors to detect cup removal.
+- Automatically resets to ready mode after user interaction.
+
+---
 
 ## Catalogue
 - [Introduction](#Introduction)
 - [Working Environment](#Working_Environment)
 - [Usage](#Usage)
 - [Example](#Example)
+- [Hardware](#Hardware)
 - [How to contribute](#How_to_contribute)
 - [Repository_Structure](#Repository_Structure)
+- [Media](#Media)
 - [Lisence](#Lisence)
-- [Contacts](#Contacts)
+- [Autuors and Contacts](#Contacts)
+- [Acknowledgements](#Acknowledgements)
+
 ## Introduction
 
 
@@ -24,6 +58,9 @@ Expected to be deployed on different platform.
 
 ## Example
 
+## Hardware
+### Hardware List
+### Hardware Connection
 
 
 ## How_to_contribute
