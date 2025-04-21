@@ -49,19 +49,24 @@ The coffee machine not only detects your presence but also monitors heart rate, 
 - [Acknowledgements](#Acknowledgements)
 
 ## Introduction
-
+This project combines image recognition technology and biological signal detection technology. By detecting the user's current facial expression, heart rate, and blood oxygen levels, it evaluates the user's current emotional and health status, and recommends and automatically makes coffee suitable for the user's physical condition. In addition, the system supports a low-power mode, automatically entering sleep mode when there is no user interaction, saving energy. The ultimate goal of this project is to provide a low-power smart coffee machine that can make coffee tailored to the user's psychological and physiological condition.
 
 ## Working_Environment
 Ubuntu 22.04.5 on Raspberry5 for now.
 Expected to be deployed on different platform. 
-## Usage 
 
-## Example
+## Usage & Example
+Using the smart coffee machine is very simple, and the user only needs to follow these steps:
+1. **Start the coffee machine**: When the user approaches the coffee machine, it will automatically wake up from sleep mode and enter the "Ready" state.
+2. **Emotion and health recognition**: When the user stands in front of the coffee machine, the system will automatically recognize the user's facial expressions and use sensors to obtain the current heart rate and blood oxygen levels.
+3. **Recipe recommendation and coffee making**: Based on the user's emotion and health status, the system will automatically recommend a suitable coffee recipe and begin making it.
+4. **Completion notification**: Once the coffee is made, the system will emit a notification sound to remind the user to pick up the coffee.
 
 ## Hardware
 ### Hardware List
+Infrared sensor * 2, Power module 220VAC~5VDC * 1, Water bumps * 5, Weight sensor/Presure sensor * 2, Heart rate and SpO2 sensor-photoelectric * 2.
 ### Hardware Connection
-
+![hardwareconnection](https://github.com/user-attachments/assets/d3c56996-df58-47ea-a724-1bcef163e7f3)
 
 ## How_to_contribute
 ##### 1.Fork this repository first.
