@@ -38,15 +38,13 @@ The coffee machine not only detects your presence but also monitors heart rate, 
 ## Catalogue
 - [Introduction](#Introduction)
 - [Working Environment](#Working_Environment)
-- [Usage](#Usage)
-- [Example](#Example)
+- [Usage & Example](#Usage_&_Example)
 - [Hardware](#Hardware)
 - [How to contribute](#How_to_contribute)
 - [Repository_Structure](#Repository_Structure)
-- [Media](#Media)
 - [Lisence](#Lisence)
-- [Autuors and Contacts](#Contacts)
-- [Acknowledgements](#Acknowledgements)
+- [Social Media](#Social_Media)
+- [Contacts](#Contacts)
 
 ## Introduction
 This project combines image recognition technology and biological signal detection technology. By detecting the user's current facial expression, heart rate, and blood oxygen levels, it evaluates the user's current emotional and health status, and recommends and automatically makes coffee suitable for the user's physical condition. In addition, the system supports a low-power mode, automatically entering sleep mode when there is no user interaction, saving energy. The ultimate goal of this project is to provide a low-power smart coffee machine that can make coffee tailored to the user's psychological and physiological condition.
@@ -122,7 +120,7 @@ Code_Space:  It is utilized to place our code and some related documents. Every 
 
 ## Lisence
 This project is licensed under the MIT License.
-## Social Media
+## Social_Media
 Instagram: [https://www.instagram.com/moodcafe_realtime](https://www.instagram.com/moodcafe_realtime?igsh=MW1mZmY5bWo1OWtocQ%3D%3D&utm_source=qr)  
 TikTok: [https://www.tiktok.com/@mood_coffee_realtime](https://www.tiktok.com/@mood_coffee_realtime?_t=ZN-8vZu8KfJSHG&_r=1)  
 YouTube: [https://youtu.be/QFT3A7u-bKY](https://youtu.be/QFT3A7u-bKY?si=9AdZxWDZZp56725b)
