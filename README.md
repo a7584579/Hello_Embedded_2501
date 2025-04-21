@@ -155,10 +155,11 @@ YouTube: [https://youtu.be/QFT3A7u-bKY](https://youtu.be/QFT3A7u-bKY?si=9AdZxWDZ
 ## Contacts
 If you have any questions or suggestions, please contact a758457953@gmail.com or visit the project's GitHub page and leave your comments.
 ## Author
-|----------|----------|----------|
-|NAME|NICKNAME|POSITION|
-|a7584579|Xin Chen|Leader and Camera Program Design|
-|CubLWolf|Jiaqi Fan|Actuator Program Design and Hardware Design|
-|GLARTEmbedded|Qi Tang|UI Design and Media Management|
-|Junteng Zheng|Junteng Zheng|Sensor Module Program Design|
-|Aria933|Yiyao Wang|Daemon Program Design|
+| NAME         | NICKNAME       | POSITION                                    |
+|--------------|----------------|---------------------------------------------|
+| a7584579     | Xin Chen       | Leader and Camera Program Design            |
+| CubLWolf     | Jiaqi Fan      | Actuator Program Design and Hardware Design |
+| GLARTEmbedded| Qi Tang        | UI Design and Media Management              |
+| Junteng Zheng| Junteng Zheng  | Sensor Module Program Design                |
+| Aria933      | Yiyao Wang     | Daemon Program Design                       |
+
