@@ -23,7 +23,7 @@ public:
     void stopDaemon();
 
 signals:
-    void stopRequested();  // 可用于通知模块关闭
+    void stopRequested();
 
 private slots:
     void run();
