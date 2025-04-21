@@ -35,6 +35,8 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
     qt_add_executable(untitled
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
@@ -43,6 +45,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ./header/audio_module_handle.h ./src/audio_module_handle.cpp
         ./header/actuator_module_handle.h ./src/actuator_module_handle.cpp
         ./header/core_module_handle.h ./src/core_module_handle.cpp
+        ./header/InfraredSensor.h ./src/InfraredSensor.cpp
+        ./header/logger.h ./src/logger.cpp
+        ./header/coffee_daemon.h ./src/coffee_daemon.cpp
         ./header/public_variable.h
         Resource.qrc
         tester.h tester.cpp
