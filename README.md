@@ -1,4 +1,4 @@
-# 📒 Project name
+# Project name
 Hello_Embedded_2501-A Smart Emotion-Aware Coffee Machine
 
 This is a repository established by a group of interesting people to create something truly enjoyable. We are thrilled and dedicated to this little charming hand-made craft. 
@@ -7,28 +7,26 @@ The project is a smart coffee machine based on the Raspberry PI 5 to recognize i
 
 An intelligent coffee brewing system that understands your physical and emotional state before making the perfect cup — just for you.
 
-## 📌 Overview
+## Overview
 
 This project was developed by Group 17 as part of the **Real-Time Embedded Coding** course at the University of Glasgow (2025). Our system integrates **biological signal monitoring** and **emotional state recognition** to personalize coffee recommendations.
 
 The coffee machine not only detects your presence but also monitors heart rate, blood oxygen levels, and facial expressions to deduce your emotional state. Based on this, it recommends a drink and automatically starts brewing — providing a smart and delightful coffee experience.  
-<img src="untitled/images/b7445c49d7c27790b5be8c8ce7444f5.png" width="600"/>
-<img src="untitled/images/af0808a31174686dbc31396a74ebcaf.png" width="600"/>
 
-### 🎯 Real-time Interaction
+### Real-time Interaction
 - **Wake-up Detection:** Uses PIR (e.g., HC-SR501) infrared sensors to wake the system when a user approaches.
 - **Sleep Detection:** Enters low-power mode when no human presence is detected after some time.
 
-### 🧠 Emotional & Physical State Recognition
+### Emotional & Physical State Recognition
 - **Camera module** analyzes facial expressions (happy/unhappy).
 - **Pulse oximeter module** detects real-time heart rate and SpO₂ levels.
 
-### ☕ Smart Coffee Making
+### Smart Coffee Making
 - Personalized coffee suggestions based on user mood and health data.
 - Manual override: users can choose their favorite drink manually.
 - Friendly on-screen interaction and music during brewing.
 
-### ✅ Status Feedback
+### Status Feedback
 - Notifies user when coffee is ready.
 - Uses weight/laser sensors to detect cup removal.
 - Automatically resets to ready mode after user interaction.
@@ -39,7 +37,6 @@ The coffee machine not only detects your presence but also monitors heart rate, 
 - [Introduction](#Introduction)
 - [Working Environment](#Working_Environment)
 - [Usage & Example](#Usage_&_Example)
-- [Hardware](#Hardware)
 - [How to contribute](#How_to_contribute)
 - [Repository_Structure](#Repository_Structure)
 - [Lisence](#Lisence)
@@ -106,14 +103,41 @@ Hello_Embedded_2501/
 ├── README.md                  # Project overview and usage instructions    
 ├── LICENSE                    # License file (MIT or similar)  
 ├── .gitignore                 # Files and directories to be ignored by Git  
-├── untitled/                  # Main project source directory  
-│   ├── build/                 # (Optional) Build output directory  
-│   ├── images/                # UI screenshots, system diagrams, poster assets  
-│   ├── include/               # Header files for core logic (e.g., sensors, control)  
-│   ├── qt_ui/                 # Qt GUI components (e.g., mainwindow.ui, UI classes)  
-│   ├── src/                   # Main application logic (mood detection, device control)  
-│   │   └── main.cpp           # Program entry point  
-│   └── daemon/                # Real-time background services and callbacks  
+untitled/
+├── header/                         
+│   ├── MAX30102.h
+│   ├── QMainWindow
+│   ├── actuator_module_handle.h
+│   ├── audio_module_handle.h
+│   ├── camera_module_handle.h
+│   ├── i2c-dev.h
+│   ├── public_variable.h
+│   └── sensor_module.h
+├── images/                         
+│   ├── 1.jpg
+│   ├── 2.png
+│   └── 3.png
+├── opencv4.11.0/                   # OpenCV 4.11.0
+│   ├── bin/                        # Executable tools
+│   ├── include/                    # OpenCV C++ header
+│   ├── lib/                        # OpenCV DLL
+│   ├── share/                      # OpenCV Source
+│   └── pkgconfig/                  # OpenCV pkg-config
+├── src/                            # Main program logic
+│   ├── actuator_module_handle.cpp
+│   ├── audio_module_handle.cpp
+│   ├── camera_module_handle.cpp
+│   ├── MAX30102.cpp
+│   └── sensor_module.cpp
+├── CMakeLists.txt                         # CMake list
+├── main.cpp                               # main entrance
+├── mainwindow.cpp                         # Main window function implementation
+├── mainwindow.h                           # Main window class definition
+├── mainwindow.ui                          # Qt Designer UI
+├── opencv_face_detector_uint8.pb          # OpenCV DNN Model weights file (binary format)
+├── quickopencv.cpp                        # Encapsulate the implementation of OpenCV fast call
+├── quickopencv.h                          # Encapsulate OpenCV quick call header file
+├── Resource.qrc                           # Qt resource files (picture/model, etc. packaging)
 ```
 
 > This repository separates GUI (Qt-based) and core logic.
@@ -130,3 +154,11 @@ TikTok: [https://www.tiktok.com/@mood_coffee_realtime](https://www.tiktok.com/@m
 YouTube: [https://youtu.be/QFT3A7u-bKY](https://youtu.be/QFT3A7u-bKY?si=9AdZxWDZZp56725b)
 ## Contacts
 If you have any questions or suggestions, please contact a758457953@gmail.com or visit the project's GitHub page and leave your comments.
+## Author
+|----------|----------|----------|
+|NAME|NICKNAME|POSITION|
+|a7584579|Xin Chen|Leader and Camera Program Design|
+|CubLWolf|Jiaqi Fan|Actuator Program Design and Hardware Design|
+|GLARTEmbedded|Qi Tang|UI Design and Media Management|
+|Junteng Zheng|Junteng Zheng|Sensor Module Program Design|
+|Aria933|Yiyao Wang|Daemon Program Design|
