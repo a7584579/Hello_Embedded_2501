@@ -6,8 +6,7 @@ This is a repository established by a group of interesting people to create some
 The project is a smart coffee machine based on the Raspberry PI 5 to recognize images and heart rate signals, adjust the coffee formula to improve the quality of the user's mood.
 
 An intelligent coffee brewing system that understands your physical and emotional state before making the perfect cup — just for you.
-
-![Smart Coffee Machine Banner](https://user-images.githubusercontent.com/your-image-placeholder/banner.jpg)
+![Mood Coffee]([https://example.com/screenshot.jpg](https://github.com/a7584579/Hello_Embedded_2501/blob/main/untitled/images/2.png))
 
 ## 📌 Overview
 
