@@ -6,13 +6,14 @@ This is a repository established by a group of interesting people to create some
 The project is a smart coffee machine based on the Raspberry PI 5 to recognize images and heart rate signals, adjust the coffee formula to improve the quality of the user's mood.
 
 An intelligent coffee brewing system that understands your physical and emotional state before making the perfect cup — just for you.
-![Mood Coffee]([https://example.com/screenshot.jpg](https://github.com/a7584579/Hello_Embedded_2501/blob/main/untitled/images/2.png))
 
 ## 📌 Overview
 
 This project was developed by Group 17 as part of the **Real-Time Embedded Coding** course at the University of Glasgow (2025). Our system integrates **biological signal monitoring** and **emotional state recognition** to personalize coffee recommendations.
 
 The coffee machine not only detects your presence but also monitors heart rate, blood oxygen levels, and facial expressions to deduce your emotional state. Based on this, it recommends a drink and automatically starts brewing — providing a smart and delightful coffee experience.
+<img src="untitled/images/b7445c49d7c27790b5be8c8ce7444f5.png" width="600"/>
+<img src="untitled/images/af0808a31174686dbc31396a74ebcaf.png" width="600"/>
 
 ### 🎯 Real-time Interaction
 - **Wake-up Detection:** Uses PIR (e.g., HC-SR501) infrared sensors to wake the system when a user approaches.
