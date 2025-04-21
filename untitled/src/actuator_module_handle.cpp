@@ -5,20 +5,24 @@
 #define PUMP2_FOR_MILK_GPIONUM              24
 #define PUMP3_FOR_LIQUIDSUGAR_GPIONUM       23
 
+#define GPIO_LIB_SOLVED
 
 static int IO_NeedtoAct=0;
 static bool IO_NeedtoState=0;
 
 Actuator_Module_Handle::Actuator_Module_Handle(QObject *parent)
     : QObject{parent}
-{    
+{
+#ifdef GPIO_LIB_SOLVED
     IO_NeedtoAct=PUMP3_FOR_LIQUIDSUGAR_GPIONUM;IO_Write_Action();
     IO_NeedtoAct=PUMP2_FOR_MILK_GPIONUM;IO_Write_Action();
     IO_NeedtoAct=PUMP1_FOR_LIQUIDCOFFEE_GPIONUM;IO_Write_Action();
+#endif
 }
 
 void Actuator_Module_Handle::IO_Output(bool IO_State,unsigned char IO_Num)
 {
+    #ifdef GPIO_LIB_SOLVED
     if(IO_Thread_Mutex.try_lock())
     {
         switch(IO_Num)
@@ -50,10 +54,12 @@ void Actuator_Module_Handle::IO_Output(bool IO_State,unsigned char IO_Num)
     {
         qDebug("IO Thread not ready");
     }
+    #endif
 }
 
 void Actuator_Module_Handle::IO_Write_Action()
 {
+    #ifdef GPIO_LIB_SOLVED
     int IO_Num=IO_NeedtoAct;
     struct gpiod_line * line=nullptr;
     struct gpiod_chip *chip=gpiod_chip_open_by_number(0);
@@ -95,7 +101,13 @@ void Actuator_Module_Handle::IO_Write_Action()
 
 end:
     return ;
+    #endif
 }
 
+
+void Actuator_Module_Handle::Actuator_Module_Start_Slot()
+{
+    emit Module_Ready();
+}
 
 

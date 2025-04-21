@@ -10,19 +10,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 message("be sure you have set your Opencv path properly")
-#set(OpenCV_DIR "./opencv4.11.0/lib/cmake/opencv4")
+set(OpenCV_DIR "~/Desktop/LocalWorkSpace/embedded-courses/untitled/opencv4.11.0/lib/cmake/opencv4")
 
 #find_package(gpiod)
 
-find_package(OpenCV REQUIRED)
-find_package(OpenEXR REQUIRED)
+find_package(OpenCV 4.11 REQUIRED)
 message("find OpenCV version:${OpenCV_VERSION}")
-# 添加系统依赖库
-link_directories(/usr/lib/x86_64-linux-gnu)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+ find_package(Qt6 REQUIRED COMPONENTS Gui)
 
 #qt_standard_project_setup()
 
@@ -47,10 +45,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ./header/camera_module_handle.h ./src/camera_module_handle.cpp
         ./header/audio_module_handle.h ./src/audio_module_handle.cpp
         ./header/actuator_module_handle.h ./src/actuator_module_handle.cpp
-        ./header/core_module_handle.h ./src/core_module_handle.cpp
         ./header/public_variable.h
         Resource.qrc
-        tester.h tester.cpp
         quickopencv.h quickopencv.cpp
         opencv4.11.0/include/opencv4/opencv2/opencv.hpp
     )
@@ -72,22 +68,13 @@ else()
     endif()
 endif()
 
-target_link_libraries(untitled
-    PRIVATE
-    Qt${QT_VERSION_MAJOR}::Widgets
-    Qt6::Core
-    ${OpenCV_LIBS}
-    gpiod
-    avcodec
-    avformat
-    avutil
-    swscale
-    jpeg
-    tiff
-    OpenEXR::OpenEXR
-    OpenEXR::OpenEXRCore
-)
+link_directories(/usr/lib/x86_64-linux-gnu)
 
+target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(untitled PRIVATE Qt6::Core)
+target_link_libraries(untitled PRIVATE ${OpenCV_LIBS} gpiod)
+target_link_libraries(untitled PRIVATE Qt6::Gui)
+#target_link_libraries(untitled PRIVATE gpiod)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

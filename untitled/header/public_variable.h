@@ -6,6 +6,8 @@
 #include "camera_module_handle.h"
 #include "actuator_module_handle.h"
 #include "audio_module_handle.h"
+#include "sensor_module.h"
+#include <QMutex>
 
 //Macro defination
 #define INDEX_OF_READYPAGE                      0
@@ -24,9 +26,22 @@
 //#define PUMP4_FOR_RESERVE_GPIONUM    22
 
 
+//Do not read this File,this file is for Camera thread only!!
+#define REALTIME_PIC_PATH "/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/RealtimeVideo.png"
+//Use this one instead
+#define PUB_REALTIME_PIC_PATH "/home/cx/Desktop/LocalWorkSpace/embedded-courses/untitled/Pub_RealtimeVideo.png"
 
+extern QMutex Access_for_Camera_Pic;//public mutex,based in camera_module
+extern uint8_t stateMachineState;
 
+extern void Public_Varaible_Init();
+extern uint8_t CurrentMachineState();
+extern void ChangeCurrentMachineState(int state);
+extern uint8_t MachinePage;
 
+extern int fd[2];//process comm
+//write(fd[1],(void*)child.data(),child.length());
+//read(fd[0],msg,sizeof(msg));
 
 enum CoffeeMachine_State
 {
@@ -46,26 +61,21 @@ public:
 
     QThread Actuator_Module_Thread;
     QThread Camera_Module_Thread;
+
+    QThread Audio_Module_Thread;
+    QThread Sensor_Module_Thread;
+
     Camera_Module_Handle* Camera_Module_Instant=nullptr;
     Actuator_Module_Handle* Actuator_Module_Instant=nullptr;
     Audio_Module_Handle* Audio_Module_Instant=nullptr;
-
-
-    Public_Varaible()
-    {
-        stateMachineState=coffeeMachine_State_Startup;
-    }
-
-    uint8_t CurrentMachineState()
-    {
-        return stateMachineState;
-    }
+    Sensor_Module* Sensor_Module_Instant=nullptr;
 
 
 
 private:
-    uint8_t stateMachineState;
 };
+
+
 
 
 #endif // PUBLIC_VARIABLE_H

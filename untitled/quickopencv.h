@@ -3,14 +3,13 @@
 
 //#pragma once
 
-#include <QObject>
+#include <cstring>
 #include "opencv2/opencv.hpp"
 
-class quickopenCV : public QObject
+class quickopenCV
 {
-    Q_OBJECT
 public:
-    explicit quickopenCV(QObject *parent = nullptr);
+    explicit quickopenCV();
     ~quickopenCV()
     {
 
@@ -48,7 +47,7 @@ public:
 
     void rotate_demo(cv::Mat& image);
 
-    void video_demo(cv::Mat& image);
+    void video_demo();
 
     void show_Histogram_demo(cv::Mat& image);//gistogram
 
@@ -62,7 +61,10 @@ public:
 
     void bilateral_blur_demo(cv::Mat& image);
 
-signals:
+    void camera_preparation();
+    char picture_capture(std::string);
+private :
+    cv::VideoCapture *capture;
 };
 
 

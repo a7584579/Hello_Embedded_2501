@@ -25,10 +25,11 @@ private:
 
 public slots:
     void IO_Output(bool IO_State,unsigned char IO_Num);
-
+    void Actuator_Module_Start_Slot();
 
 signals:
     void IO_Action_Failed();
+    void Module_Ready();
 };
 
 #endif // ACTUATOR_MODULE_HANDLE_H
